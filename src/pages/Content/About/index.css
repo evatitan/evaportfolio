@@ -1,0 +1,35 @@
+.columns {
+	align-items: center;
+	justify-content: center;
+	background-color: #caf0f8;
+}
+
+.column h2 {
+	padding-left: 10%;
+	font-size: 2em;
+	font-weight: 400;
+}
+.column p {
+	padding-left: 10%;
+}
+
+.column p::first-letter {
+	font-size: 2em;
+	color: orange;
+}
+
+.column-img {
+	align-items: center;
+	border-radius: 2%;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s linear;
+}
+
+.column-img:hover {
+	transform: scale(0.8);
+	border-radius: 10%;
+}
+
+@media only screen and (max-width: 375px) {
+}
