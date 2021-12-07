@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHome, faAddressCard, faGlobeAsia, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import './index.css';
 import eva from './eva.jpeg';
