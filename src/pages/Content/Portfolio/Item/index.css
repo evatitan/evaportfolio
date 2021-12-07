@@ -1,4 +1,13 @@
 .card {
+	width: auto;
 	padding: 3%;
-	background-color: #e9ecef;
+	background-color: #bbdefb;
+}
+
+.page-item {
+	width: 100% !important;
+}
+
+.card-content {
+	font-size: 1.2em;
 }

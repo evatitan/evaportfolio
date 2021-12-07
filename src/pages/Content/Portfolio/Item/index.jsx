@@ -11,36 +11,38 @@ export default class Item extends Component {
 	render() {
 		const { name, description } = this.props;
 		return (
-			<div className="column is-one-fifth">
-				<div className="card">
-					<div className="card-image">
-						<figure className="image">
-							<img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
-						</figure>
-					</div>
+			<div>
+				<div className="column page-item">
+					<div className="card">
+						<div className="card-image">
+							<figure className="image">
+								<img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+							</figure>
+						</div>
 
-					<div className="card-content">
-						<p>
-							{name} <br /> {description}
-						</p>
-					</div>
+						<div className="card-content">
+							<p>
+								{name} <br /> {description}
+							</p>
+						</div>
 
-					<footer className="card-footer">
-						<p className="card-footer-item">
-							<span>
-								<a href="#">
-									<FontAwesomeIcon icon={faLaptop} />
-								</a>
-							</span>
-						</p>
-						<p className="card-footer-item">
-							<span>
-								<a href="https://github.com/evatitan/perfil">
-									<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
-								</a>
-							</span>
-						</p>
-					</footer>
+						<footer className="card-footer">
+							<p className="card-footer-item">
+								<span>
+									<a href="#">
+										<FontAwesomeIcon icon={faLaptop} />
+									</a>
+								</span>
+							</p>
+							<p className="card-footer-item">
+								<span>
+									<a href="https://github.com/evatitan/perfil">
+										<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
+									</a>
+								</span>
+							</p>
+						</footer>
+					</div>
 				</div>
 			</div>
 		);

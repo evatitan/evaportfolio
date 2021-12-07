@@ -13,7 +13,7 @@ export default class Portfolio extends Component {
 	render() {
 		const { projects } = this.state;
 		return (
-			<div className="columns">
+			<div className="columns page-portfolio">
 				{projects.map((projectObj) => {
 					return <Item key={projectObj.id} {...projectObj} />;
 				})}
