@@ -1,24 +1,19 @@
 .map-container {
-	height: 430px;
+	height: 450px;
 }
 
-.sidebar {
-	background-color: rgba(35, 55, 75, 0.9);
-	color: #fff;
-	padding: 6px 12px;
-	font-family: monospace;
-	z-index: 1;
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 12px;
-	border-radius: 4px;
+.travel-page {
+	height: 480px !important;
+	background-color: #d7e3fc !important;
+	align-items: center !important;
+	justify-content: none !important;
 }
 
 h2 {
-	padding-top: 20px;
+	padding-top: 0px;
 	text-align: center;
 }
+
 .description {
 	text-align: left;
 	font-size: 1.3em;
@@ -26,6 +21,15 @@ h2 {
 }
 
 .mapboxgl-popup {
-	max-width: 400px;
+	max-width: 350px;
 	font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 375px) {
+	.map-container {
+		height: 350px;
+	}
+	.travel-page {
+		height: 425px !important;
+	}
 }
