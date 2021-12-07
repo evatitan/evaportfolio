@@ -2,6 +2,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: #caf0f8;
+	height: 940px;
 }
 
 .column h2 {
@@ -32,4 +33,10 @@
 }
 
 @media only screen and (max-width: 375px) {
+	.columns {
+		align-items: center;
+		justify-content: center;
+		background-color: #caf0f8;
+		height: 700px;
+	}
 }
