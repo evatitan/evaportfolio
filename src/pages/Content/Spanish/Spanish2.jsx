@@ -4,7 +4,7 @@ import { faBook, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { levels, selectedLevel, sayings } from './sayings.json';
 import './index.css';
 
-export default class Spanish extends Component {
+export default class Spanish2 extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -13,8 +13,6 @@ export default class Spanish extends Component {
 			sayings: sayings
 				.map((saying) => ({
 					...saying,
-					showLevel: true,
-					showSearch: true,
 					showExample: false,
 					example: saying.example || saying.title
 				}))
@@ -27,32 +25,13 @@ export default class Spanish extends Component {
 		};
 	}
 
-	handleSearchChange = (searchText) => {
-		const { sayings } = this.state;
-
-		const normalizedText = searchText.toUpperCase().trim();
-
-		const newSayings = sayings.map((saying) => {
-			return { ...saying, showSearch: saying.title.toUpperCase().includes(normalizedText) };
-		});
-
-		this.setState({
-			sayings: newSayings
-		});
-	};
-
 	handleLevelChange = (id) => {
-		const { sayings, levels } = this.state;
+		const { levels } = this.state;
 		// Encontramos la nueva opcion seleccionada
 		const newSelectedLevel = levels.find((level) => level.id === id);
 
-		const newSayings = sayings.map((saying) => {
-			return { ...saying, showLevel: newSelectedLevel.value === null || newSelectedLevel.value === saying.level };
-		});
-
 		this.setState({
-			selectedLevel: newSelectedLevel,
-			sayings: newSayings
+			selectedLevel: newSelectedLevel
 		});
 	};
 
@@ -68,8 +47,7 @@ export default class Spanish extends Component {
 	};
 
 	renderSaying = (saying) => {
-		if (saying.showLevel === false || saying.showSearch === false) return null;
-		
+		if (saying.show === false) return null;
 		return (
 			<div key={saying.id}>
 				<a className="panel-block is-active" onClick={(e) => this.handleSayingClick(saying.id)}>
@@ -97,6 +75,26 @@ export default class Spanish extends Component {
 			</div>
 		);
 	};
+	renderAllSayings = () => {
+		return this.state.sayings.map(this.renderSaying);
+	};
+	renderEasySayings = () => {
+		return this.state.sayings.filter((saying) => saying.level === 1).map(this.renderSaying);
+	};
+	renderDifficultSayings = () => {
+		return this.state.sayings.filter((saying) => saying.level === 2).map(this.renderSaying);
+	};
+
+	renderSayings = () => {
+		switch (this.state.selectedLevel.id) {
+			case 0:
+				return this.renderAllSayings();
+			case 1:
+				return this.renderEasySayings();
+			case 2:
+				return this.renderDifficultSayings();
+		}
+	};
 
 	render() {
 		return (
@@ -119,19 +117,14 @@ export default class Spanish extends Component {
 					<div className="panel-block">
 						<p className="control has-icons-left">
 							<label htmlFor="">
-								<input
-									onChange={(e) => this.handleSearchChange(e.target.value)}
-									className="input is-info"
-									type="text"
-									placeholder="Search"
-								/>
+								<input className="input is-info" type="text" placeholder="Search" />
 							</label>
 							<span className="icon is-left">
 								<i className="fas fa-search" aria-hidden="true" />
 							</span>
 						</p>
 					</div>
-					{this.state.sayings.map(this.renderSaying)}
+					{this.renderSayings()}
 				</article>
 			</div>
 		);
