@@ -1,0 +1,290 @@
+{
+	"saying": [
+		{
+			"id": "1",
+			"saying": "Con dos huevos",
+			"means": "con valentía",
+			"example": "No era muy buen estudiante, pero al final se sacó la carrera, con dos huevos.",
+			"level": "1"
+		},
+		{
+			"id": "2",
+			"saying": "Éramos pocos y parió la abuela ",
+			"means": "armar un escándalo, desencadenar una discusión",
+			"example": "Me ha montado un pollo, porque llegué tarde.",
+			"level": "2"
+		},
+		{
+			"id": "3",
+			"saying": "Montar un pollo",
+			"means": "Fórmula coloquial de enojo, rabia o disgusto.",
+			"example": "Me acaban de robar la cartera, ¡me cago en la leche!",
+			"level": "1"
+		},
+		{
+			"id": "4",
+			"saying": "Cargarse en la leche",
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "5",
+			"saying": "Echar un polvo",
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "6",
+			"saying": "Viejo verde",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "7",
+			"saying": "Una mierda pinchada en un palo",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "8",
+			"saying": "Manda huevos",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "9",
+			"saying": "Tener una empanada mental",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "10",
+			"saying": "Comerse el coco",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+
+		{
+			"id": "11",
+			"saying": "Pollas en vinagre",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "12",
+			"saying": "Tener un morro que se lo pisa",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "13",
+			"saying": "Poner los cuernos",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "14",
+			"saying": "Estar en todos los fregados",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "15",
+			"saying": "Partirse el culo",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "16",
+			"saying": "Cagarse en dio",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "17",
+			"saying": "Tener la mosca detrás de la oreja",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "18",
+			"saying": "El coño de la bernarda",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "19",
+			"saying": "Pelar la pava",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "20",
+			"saying": "Calzonazos",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+
+		{
+			"id": "21",
+			"saying": "Dar el coñazo",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "22",
+			"saying": "Hacerse el sueco ",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "23",
+			"saying": "Cágate, lorito",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "24",
+			"saying": "Cepillarse a alguien",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "25",
+			"saying": "Aquí hay gato encerrado",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "26",
+			"saying": "Irse por los cerros de Úbeda",
+
+			"means": "",
+			"example": "",
+			"level": "2"
+		},
+		{
+			"id": "27",
+			"saying": "Hostias como panes",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{
+			"id": "28",
+			"saying": "Que te den morcilla",
+
+			"means": "",
+			"example": "",
+			"level": "1"
+		},
+		{ "id": "29", "saying": "Agarrar un pedo", "means": "", "example": "", "level": "1" },
+		{ "id": "30", "saying": "Estirar la pata", "means": "", "example": "", "level": "1" },
+
+		{ "id": "31", "saying": "Donde Cristo perdió los clavos", "means": "", "example": "", "level": "1" },
+		{ "id": "32", "saying": "Dormir la mona", "means": "", "example": "", "level": "1" },
+		{ "id": "33", "saying": "Joder la marrana", "means": "", "example": "", "level": "1" },
+		{ "id": "34", "saying": "Mandar a freír espárragos", "means": "", "example": "", "level": "1" },
+		{ "id": "35", "saying": "Liarse la manta a la cabeza", "means": "", "example": "", "level": "1" },
+		{ "id": "36", "saying": "Teta de novicia", "means": "", "example": "", "level": "1" },
+		{ "id": "37", "saying": "Tirarse el moco", "means": "", "example": "", "level": "1" },
+		{ "id": "38", "saying": "Planchar la oreja", "means": "", "example": "", "level": "1" },
+		{ "id": "39", "saying": "Cantarle a uno el pozo", "means": "", "example": "", "level": "1" },
+		{ "id": "40", "saying": "Casarse de penalti", "means": "", "example": "", "level": "1" },
+
+		{ "id": "41", "saying": "Estar como una regadera", "means": "", "example": "", "level": "1" },
+		{ "id": "42", "saying": "Estar metido en el ajo", "means": "", "example": "", "level": "1" },
+		{ "id": "43", "saying": "Cagarse por la pata abajo ", "means": "", "example": "", "level": "1" },
+		{ "id": "44", "saying": "Darse con un canto en los dientes", "means": "", "example": "", "level": "1" },
+		{ "id": "45", "saying": "Que te folle un pez", "means": "", "example": "", "level": "1" },
+		{ "id": "46", "saying": "Vérsele a uno el plumero", "means": "", "example": "", "level": "2" },
+		{ "id": "47", "saying": "Cagando leches", "means": "", "example": "", "level": "1" },
+		{ "id": "48", "saying": "Marear la perdiz", "means": "", "example": "", "level": "" },
+		{ "id": "49", "saying": "despedirse a la francesa", "means": "", "example": "", "level": "1" },
+		{ "id": "50", "saying": "Mojar el churro", "means": "", "example": "", "level": "1" },
+
+		{ "id": "51", "saying": "A buenas horas, mangas verdes", "means": "", "example": "", "level": "1" },
+		{ "id": "52", "saying": "Cuando las ranas críen pelo ", "means": "", "example": "", "level": "1" },
+		{ "id": "53", "saying": "Estar a dos velas", "means": "", "example": "", "level": "1" },
+		{ "id": "54", "saying": "Tener el culo pelado ", "means": "", "example": "", "level": "1" },
+		{ "id": "55", "saying": "Pisando huevos  ", "means": "", "example": "", "level": "1" },
+		{ "id": "56", "saying": "Crecerle a alguien los enanos", "means": "", "example": "", "level": "1" },
+		{ "id": "57", "saying": "salir del armario ", "means": "", "example": "", "level": "1" },
+		{ "id": "58", "saying": "Tener narices", "means": "", "example": "", "level": "1" },
+		{ "id": "59", "saying": "Los cojones de corbata ", "means": "", "example": "", "level": "1" },
+		{ "id": "60", "saying": "No ser moco de pavo ", "means": "", "example": "", "level": "1" },
+
+		{ "id": "61", "saying": "A tumba abierta ", "means": "", "example": "", "level": "1" },
+		{ "id": "62", "saying": "Dorar la píldora", "means": "", "example": "", "level": "1" },
+		{ "id": "63", "saying": "Buscar tres pies al gato", "means": "", "example": "", "level": "1" },
+		{ "id": "64", "saying": "Dar calabazas", "means": "", "example": "", "level": "1" },
+		{ "id": "65", "saying": "Hacer el indio", "means": "", "example": "", "level": "1" },
+		{ "id": "66", "saying": "Cagarse en la mar ", "means": "", "example": "", "level": "1" },
+		{ "id": "67", "saying": "Cortar el bacalao", "means": "", "example": "", "level": "1" },
+		{ "id": "68", "saying": "Ser un chorizo", "means": "", "example": "", "level": "1" },
+		{ "id": "69", "saying": "Hacerse una paja mental ", "means": "", "example": "", "level": "1" },
+		{ "id": "70", "saying": "Estar hecho un adán ", "means": "", "example": "", "level": "2" },
+
+		{ "id": "71", "saying": "Matar el gusanillo ", "means": "", "example": "", "level": "1" },
+		{ "id": "72", "saying": "Naranjas de La China ", "means": "", "example": "", "level": "1" },
+		{ "id": "73", "saying": "Bajarse los pantalones", "means": "", "example": "", "level": "2" },
+		{ "id": "74", "saying": "Quitarse el muerto de encima", "means": "", "example": "", "level": "1" },
+		{ "id": "75", "saying": "Comerle a alguien la oreja", "means": "", "example": "", "level": "1" },
+		{ "id": "76", "saying": "Ser un as ", "means": "", "example": "", "level": "1" },
+		{ "id": "77", "saying": "Echar sapos y culebras por la boca", "means": "", "example": "", "level": "2" },
+		{ "id": "78", "saying": "Tela marinera ", "means": "", "example": "", "level": "2" },
+		{ "id": "79", "saying": "Quemarse las pestañas", "means": "", "example": "", "level": "1" },
+		{ "id": "80", "saying": "Tirar la casa por la ventana ", "means": "", "example": "", "level": "1" },
+
+		{ "id": "81", "saying": "Diálogo de besugos", "means": "", "example": "", "level": "2" },
+		{ "id": "82", "saying": "Cagarse en los muertos de alguien ", "means": "", "example": "", "level": "2" },
+		{ "id": "83", "saying": "Tener una torrija encima", "means": "", "example": "", "level": "2" },
+		{ "id": "84", "saying": "Perder hasta las orejas ", "means": "", "example": "", "level": "1" },
+		{ "id": "85", "saying": "Estar hecho unos zorros ", "means": "", "example": "", "level": "1" },
+		{ "id": "86", "saying": "Escurrir el bulto ", "means": "", "example": "", "level": "2" },
+		{ "id": "87", "saying": "Estar frito ", "means": "", "example": "", "level": "1" }
+	]
+}
