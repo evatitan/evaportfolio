@@ -1,62 +1,91 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
-import { saying } from './sayings.json';
+import { faBook, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { sayings } from './sayings.json';
 import './index.css';
 
 export default class Spanish extends Component {
+	constructor() {
+		super();
+		this.state = {
+			sayings: sayings
+				.map((saying) => ({ ...saying, show: false, example: saying.example || saying.title }))
+				.sort((a, b) => {
+					const aTitle = a.title.toLowerCase();
+					const bTitle = b.title.toLowerCase();
+
+					return aTitle.localeCompare(bTitle);
+				})
+		};
+	}
+
+	handleSayingClick = (id) => {
+		const { sayings } = this.state;
+
+		const newSayings = sayings.map((saying) => {
+			if (saying.id === id) {
+				return { ...saying, show: !saying.show };
+			} else return saying;
+		});
+		this.setState({ sayings: newSayings });
+	};
+
+	renderAllSaying = (saying = {}) => {
+		return (
+			<Fragment>
+				<a key={saying.id} className="panel-block is-active" onClick={(e) => this.handleSayingClick(saying.id)}>
+					<span className="panel-icon">
+						<FontAwesomeIcon icon={faBook} />
+						<i className="fas fa-book" aria-hidden="false" />
+					</span>
+					<b> {saying.title}</b>
+				</a>
+				<div className="sayingMeans">
+					{saying.show &&
+					saying.level && (
+						<p>
+							<i>
+								<b>Significado : </b>
+							</i>
+							{saying.means}
+							<br />
+							<i>
+								<b>Ejemplo : </b>
+							</i>
+							{saying.example}
+						</p>
+					)}
+				</div>
+			</Fragment>
+		);
+	};
+
+	renderEasySayings = () => {};
+	renderDifficultSayings = () => {};
+
 	render() {
 		return (
 			<div className="page-spanish">
-                
-				<div class="dropdown is-hoverable">
-					<div class="dropdown-trigger">
-						<button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-							<span>Hover me</span>
-							<span class="icon is-small">
-								<i class="fas fa-angle-down" aria-hidden="true" />
-							</span>
-						</button>
-					</div>
-					<div class="dropdown-menu" id="dropdown-menu4" role="menu">
-						<div class="dropdown-content">
-							<div class="dropdown-item">
-								<p>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<article class="panel is-info">
-					<p class="panel-heading">Spanish Sayings that I Konw</p>
-					<p class="panel-tabs">
-						<a class="is-active">All</a>
-						<a>Easy</a>
-						<a>Difficult</a>
+				<article className="panel is-info">
+					<p className="panel-heading">Spanish Sayings that I Know</p>
+					<p className="panel-tabs">
+						<a onClick={this.renderAllSaying} className="is-active">
+							All
+						</a>
+						<a onClick={this.renderEasySayings}>Easy</a>
+						<a onClick={this.renderDifficultSayings}>Difficult</a>
 					</p>
-					<div class="panel-block">
-						<p class="control has-icons-left">
+					<div className="panel-block">
+						<p className="control has-icons-left">
 							<label htmlFor="">
-								<input class="input is-info" type="text" placeholder="Search" />
+								<input className="input is-info" type="text" placeholder="Search" />
 							</label>
-
-							<span class="icon is-left">
-								<i class="fas fa-search" aria-hidden="true" />
+							<span className="icon is-left">
+								<i className="fas fa-search" aria-hidden="true" />
 							</span>
 						</p>
 					</div>
-
-					{saying.map((sayingObj) => {
-						return (
-							<a class="panel-block is-active">
-								<span class="panel-icon">
-									<FontAwesomeIcon icon={faBook} />
-								</span>
-								{sayingObj.saying}
-							</a>
-						);
-					})}
+					{this.state.sayings.map(this.renderAllSaying)}
 				</article>
 			</div>
 		);
