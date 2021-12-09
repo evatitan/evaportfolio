@@ -1,52 +1,49 @@
 .home-page {
-	background-color: #748cab;
-	width: 100%;
-	height: 940px;
-}
-
-.presentation {
-	text-align: center;
+	height: 100vh;
 	color: #edf2f4;
-	padding: 13%;
-	font-size: 30px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	background-color: #2980b9;
 }
 
-.contanct {
-	text-align: center;
-	padding: 4%;
+.my-name {
+	display: flex;
+	color: white;
+	font-size: 2.5em;
+	text-transform: uppercase;
 }
 
-.goDown {
+.my-postion {
+	display: flex;
+	color: white;
+	font-size: 2.5em;
 	text-align: center;
-	color: #edf2f4;
-	font-size: 35px;
+	text-transform: uppercase;
+	margin-top: 30px;
+}
+.home-contact {
+	margin-top: 30px;
+}
+
+span {
+	padding: 0 20px;
+	line-height: 100px;
+	background: #9d4edd;
+	border-radius: 5%;
+	animation: bulge 2s infinite;
+}
+
+.home-icon {
+	font-size: 2.5em;
+}
+@keyframes bulge {
+	50% {
+		box-shadow: 0 20px 0 #fad2e1;
+		transform: translateY(-30px);
+	}
 }
 
 @media only screen and (max-width: 375px) {
-	header {
-		background-color: #748cab;
-		width: 100%;
-		height: 700px;
-	}
-
-	.presentation {
-		text-align: center;
-		color: #edf2f4;
-		margin-top: 30%;
-		padding: 15%;
-		font-size: 25px;
-	}
-
-	.contanct {
-		text-align: center;
-		margin-top: 30%;
-		padding: 25%;
-	}
-
-	.goDown {
-		text-align: center;
-		color: #edf2f4;
-		margin-top: 15%;
-		font-size: 35px;
-	}
 }
