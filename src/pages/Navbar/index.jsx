@@ -52,10 +52,7 @@ export default class index extends React.Component {
 						<div className="navbar-item">
 							<div className="buttonfield is-groupeds">
 								<Link className="button is-info" to="">
-									<span className="icon">
-										<FontAwesomeIcon icon={faDownload} />
-									</span>
-									<span>Download</span>
+									<FontAwesomeIcon icon={faDownload} />&nbsp; Download
 								</Link>
 							</div>
 						</div>
