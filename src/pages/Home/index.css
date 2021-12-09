@@ -37,10 +37,11 @@ span {
 
 .home-icon {
 	font-size: 2.5em;
+	color: white;
 }
 @keyframes bulge {
 	50% {
-		box-shadow: 0 20px 0 #fad2e1;
+		box-shadow: 0 20px 0 #eae4e9;
 		transform: translateY(-30px);
 	}
 }

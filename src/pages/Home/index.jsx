@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons';
@@ -19,6 +20,7 @@ export default class Home extends Component {
 			myName.append(span);
 		});
 	}
+
 	render() {
 		return (
 			<div className="home-page">
@@ -27,11 +29,17 @@ export default class Home extends Component {
 					<div className="my-postion">Full Stack Web Developer</div>
 
 					<div className="home-contact">
-						<FontAwesomeIcon className="home-icon" icon={[ 'fab', 'github' ]} />
+						<a href="https://github.com/evatitan">
+							<FontAwesomeIcon className="home-icon" icon={[ 'fab', 'github' ]} />{' '}
+						</a>
 						&nbsp; &nbsp;&nbsp;
-						<FontAwesomeIcon className="home-icon" icon={[ 'fab', 'linkedin' ]} />
+						<a href="https://www.linkedin.com/in/guihua-yin-a04191b7/">
+							<FontAwesomeIcon className="home-icon" icon={[ 'fab', 'linkedin' ]} />
+						</a>
 						&nbsp; &nbsp;&nbsp;
-						<FontAwesomeIcon className="home-icon" icon={[ 'fab', 'instagram-square' ]} />
+						<a href="https://www.instagram.com/yin.guihua/">
+							<FontAwesomeIcon className="home-icon" icon={[ 'fab', 'instagram-square' ]} />
+						</a>
 					</div>
 				</div>
 
