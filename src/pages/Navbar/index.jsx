@@ -47,6 +47,9 @@ export default class index extends React.Component {
 								</MyNavLink>
 							</div>
 						</div>
+						<MyNavLink to="/contact" className="navbar-item" style={{ fontSize: '20px' }}>
+							Contact
+						</MyNavLink>
 					</div>
 					<div className="navbar-end">
 						<div className="navbar-item">
