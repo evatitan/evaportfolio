@@ -42,12 +42,7 @@ export default class Contact extends Component {
 								/>
 							</div>
 						</div>
-						<div className="field">
-							<label className="label">Email</label>
-							<div className="control">
-								<input className="input" type="email" placeholder="Email" />
-							</div>
-						</div>
+
 						<div className="field">
 							<label className="label">Subject</label>
 							<div className="control">
@@ -75,14 +70,12 @@ export default class Contact extends Component {
 						</a> */}
 						<div className="field is-grouped">
 							<div className="control">
-								<a href="#mail">
-									<span />
-								</a>
 								<a
 									id="mail"
-									href={`mailto:yinguihua2014@gmail.com?subject=${subject}&body=${message}---${name}`}
+									target="_blank"
+									href={`mailto:yinguihua2014@gmail.com?subject=${subject}&body=${message}%0A---${name}`}
 								>
-									<button className="button is-link">Submit</button>
+									<span className="button is-link">Send Email</span>
 								</a>
 							</div>
 						</div>
