@@ -15,6 +15,7 @@ export default class Home extends Component {
 
 		myNameLetters.forEach((letter, index) => {
 			let span = document.createElement('span');
+			span.setAttribute('class', 'homeSpan');
 			span.textContent = letter;
 			span.style.animationDelay = `${index / 6}s`;
 			myName.append(span);
