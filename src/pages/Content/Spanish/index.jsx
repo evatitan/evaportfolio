@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { levels, selectedLevel, sayings } from './sayings.json';
 import './index.css';
 
@@ -69,10 +69,10 @@ export default class Spanish extends Component {
 
 	renderSaying = (saying) => {
 		if (saying.showLevel === false || saying.showSearch === false) return null;
-		
+
 		return (
 			<div key={saying.id}>
-				<a className="panel-block is-active" onClick={(e) => this.handleSayingClick(saying.id)}>
+				<a className="panel-block is-active" href="/" onClick={(e) => this.handleSayingClick(saying.id)}>
 					<span className="panel-icon">
 						<FontAwesomeIcon icon={faBook} />
 						<i className="fas fa-book" aria-hidden="false" />
@@ -107,6 +107,7 @@ export default class Spanish extends Component {
 						{this.state.levels.map((level) => {
 							return (
 								<a
+									href="/"
 									key={level.id}
 									className={level.id === this.state.selectedLevel.id ? 'is-active' : ''}
 									onClick={() => this.handleLevelChange(level.id)}

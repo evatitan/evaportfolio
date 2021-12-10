@@ -28,7 +28,7 @@ export default class Item extends Component {
 
 						<footer className="card-footer">
 							<p className="card-footer-item">
-								<a href="#">
+								<a href="/">
 									<FontAwesomeIcon icon={faLaptop} />
 								</a>
 							</p>
