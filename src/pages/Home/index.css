@@ -12,6 +12,7 @@
 	display: flex;
 	color: white;
 	font-size: 2.5em;
+	font-weight: 600;
 	text-transform: uppercase;
 }
 
@@ -23,6 +24,7 @@
 	text-transform: uppercase;
 	margin-top: 30px;
 }
+
 .home-contact {
 	margin-top: 30px;
 }
@@ -32,7 +34,7 @@ span {
 	line-height: 100px;
 	background: #9d4edd;
 	border-radius: 5%;
-	animation: bulge 2s infinite;
+	animation: bulge 2.2s infinite;
 }
 
 .home-icon {
@@ -47,4 +49,54 @@ span {
 }
 
 @media only screen and (max-width: 375px) {
+	.home-page {
+		height: 100vh;
+		color: #edf2f4;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		background-color: #2980b9;
+	}
+
+	.my-name {
+		display: flex;
+		color: white;
+		font-size: 1em;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	.my-postion {
+		display: flex;
+		color: white;
+		font-size: 2em;
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 30px;
+	}
+
+	.home-contact {
+		margin-top: 30px;
+	}
+
+	span {
+		padding: 0 15px;
+		line-height: 100px;
+		background: #9d4edd;
+		border-radius: 5%;
+		animation: bulge 2.2s infinite;
+	}
+
+	.home-icon {
+		font-size: 1.5em;
+		color: white;
+	}
+
+	@keyframes bulge {
+		50% {
+			box-shadow: 0 20px 0 #eae4e9;
+			transform: translateY(-30px);
+		}
+	}
 }
