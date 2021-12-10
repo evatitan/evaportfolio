@@ -2,7 +2,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: #1a535c;
-	height: 930px;
+	height: 100vh;
 }
 
 @media only screen and (max-width: 375px) {

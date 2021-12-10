@@ -28,18 +28,14 @@ export default class Item extends Component {
 
 						<footer className="card-footer">
 							<p className="card-footer-item">
-								<span>
-									<a href="#">
-										<FontAwesomeIcon icon={faLaptop} />
-									</a>
-								</span>
+								<a href="#">
+									<FontAwesomeIcon icon={faLaptop} />
+								</a>
 							</p>
 							<p className="card-footer-item">
-								<span>
-									<a href="https://github.com/evatitan/perfil">
-										<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
-									</a>
-								</span>
+								<a href="https://github.com/evatitan/perfil">
+									<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
+								</a>
 							</p>
 						</footer>
 					</div>
