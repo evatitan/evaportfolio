@@ -69,7 +69,7 @@ export default class Spanish extends Component {
 
 	renderSaying = (saying) => {
 		if (saying.showLevel === false || saying.showSearch === false) return null;
-		
+
 		return (
 			<div key={saying.id}>
 				<a className="panel-block is-active" onClick={(e) => this.handleSayingClick(saying.id)}>
