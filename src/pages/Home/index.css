@@ -29,7 +29,7 @@
 	margin-top: 30px;
 }
 
-span {
+.homeSpan {
 	padding: 0 20px;
 	line-height: 100px;
 	background: #9d4edd;
@@ -80,7 +80,7 @@ span {
 		margin-top: 30px;
 	}
 
-	span {
+	.homeSpan {
 		padding: 0 15px;
 		line-height: 100px;
 		background: #9d4edd;
