@@ -9,14 +9,14 @@ library.add(fab, faLaptop);
 
 export default class Item extends Component {
 	render() {
-		const { name, description } = this.props;
+		const { name, description, img } = this.props;
 		return (
 			<div>
 				<div className="column page-item">
 					<div className="card">
 						<div className="card-image">
 							<figure className="image">
-								<img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+								<img className="projectImg" src={img} alt="" />
 							</figure>
 						</div>
 
