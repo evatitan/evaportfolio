@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Item from './Item';
 import urTurn from './urturn.png';
 import scoreGame from './ScoreGame.png';
 import evaResume from './evaResume.png';
 import './index.css';
 
-export default class Portfolio extends Component {
+export default class Portfolio extends PureComponent {
 	state = {
 		projects: [
 			{ id: '001', name: 'Resume', description: 'React', img: evaResume },
@@ -18,9 +18,11 @@ export default class Portfolio extends Component {
 	static getDerivedStateFromError(error) {
 		return { hasError: error };
 	}
+
 	componentDidCatch(error) {
 		console.log(error);
 	}
+
 	render() {
 		const { projects } = this.state;
 		return (

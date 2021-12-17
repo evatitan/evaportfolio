@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLaptop } from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +7,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import './index.css';
 library.add(fab, faLaptop);
 
-export default class Item extends Component {
+export default class Item extends PureComponent {
 	render() {
 		const { name, description, img } = this.props;
 		return (
