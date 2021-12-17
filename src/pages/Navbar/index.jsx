@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MyNavLink from '../../components/MyNavLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
-export default class index extends React.Component {
+export default class index extends Component {
 	render() {
 		return (
 			<nav className="navbar" role="navigation" aria-label="main navigation">
