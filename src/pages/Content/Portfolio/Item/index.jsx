@@ -9,7 +9,7 @@ library.add(fab, faLaptop);
 
 export default class Item extends PureComponent {
 	render() {
-		const { name, description, img } = this.props;
+		const { name, description, img, webSrc, githubSrc } = this.props;
 		return (
 			<div>
 				<div className="column page-item">
@@ -22,18 +22,19 @@ export default class Item extends PureComponent {
 
 						<div className="card-content">
 							<p>
-								{name} <br /> {description}
+								<strong>{name}</strong>
+								<br /> <i>{description}</i>
 							</p>
 						</div>
 
 						<footer className="card-footer">
 							<p className="card-footer-item">
-								<a href="/">
+								<a href={webSrc}>
 									<FontAwesomeIcon icon={faLaptop} />
 								</a>
 							</p>
 							<p className="card-footer-item">
-								<a href="https://github.com/evatitan/perfil">
+								<a href={githubSrc}>
 									<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
 								</a>
 							</p>
