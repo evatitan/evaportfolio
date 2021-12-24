@@ -1,39 +1,44 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Navbar from './pages/Navbar';
-import Home from './pages/Home';
-import Portfolio from './pages/Content/Portfolio';
-import Travel from './pages/Content/Travel';
-import Spanish from './pages/Content/Spanish';
-import Footer from './pages/Footer';
-import About from './pages/Content/About';
+import Loading from './components/Loading';
+const Navbar = lazy(() => import('./pages/Navbar'));
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/Content/About'));
+const Travel = lazy(() => import('./pages/Content/Travel'));
+const Portfolio = lazy(() => import('./pages/Content/Portfolio'));
+const Spanish = lazy(() => import('./pages/Content/Spanish'));
+const Contact = lazy(() => import('./pages/Content/Contact'));
+const Footer = lazy(() => import('./pages/Footer'));
 
 export default class App extends Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
-
-				<Switch>
-					<Route path="/home">
-						<Home />
-					</Route>
-					<Route path="/about">
-						<About />
-					</Route>
-					<Route path="/travel">
-						<Travel />
-					</Route>
-					<Route path="/portfolio">
-						<Portfolio />
-					</Route>
-					<Route path="/language/spanish">
-						<Spanish />
-					</Route>
-					<Redirect to="/home" />
-				</Switch>
-
-				<Footer />
+				<Suspense fallback={<Loading />}>
+					<Navbar />
+					<Switch>
+						<Route path="/home">
+							<Home />
+						</Route>
+						<Route path="/about">
+							<About />
+						</Route>
+						<Route path="/travel">
+							<Travel />
+						</Route>
+						<Route path="/portfolio">
+							<Portfolio />
+						</Route>
+						<Route path="/language/spanish">
+							<Spanish />
+						</Route>
+						<Route path="/contact">
+							<Contact />
+						</Route>
+						<Redirect to="/home" />
+					</Switch>
+					<Footer />
+				</Suspense>
 			</div>
 		);
 	}

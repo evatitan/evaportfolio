@@ -11,3 +11,8 @@
 .card-content {
 	font-size: 1.2em;
 }
+
+.projectImg {
+	height: 300px !important;
+	width: 400px !important;
+}

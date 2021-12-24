@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLaptop } from '@fortawesome/free-solid-svg-icons';
@@ -7,16 +7,16 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import './index.css';
 library.add(fab, faLaptop);
 
-export default class Item extends Component {
+export default class Item extends PureComponent {
 	render() {
-		const { name, description } = this.props;
+		const { name, description, img } = this.props;
 		return (
 			<div>
 				<div className="column page-item">
 					<div className="card">
 						<div className="card-image">
 							<figure className="image">
-								<img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+								<img className="projectImg" src={img} alt="" />
 							</figure>
 						</div>
 
@@ -28,7 +28,7 @@ export default class Item extends Component {
 
 						<footer className="card-footer">
 							<p className="card-footer-item">
-								<a href="#">
+								<a href="/">
 									<FontAwesomeIcon icon={faLaptop} />
 								</a>
 							</p>
