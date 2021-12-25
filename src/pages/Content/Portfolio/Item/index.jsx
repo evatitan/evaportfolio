@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLaptop } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +12,7 @@ export default class Item extends PureComponent {
 	render() {
 		const { name, description, img, webSrc, githubSrc } = this.props;
 		return (
-			<div>
+			<div className='item-page'>
 				<div className="column page-item">
 					<div className="card">
 						<div className="card-image">
@@ -29,9 +30,9 @@ export default class Item extends PureComponent {
 
 						<footer className="card-footer">
 							<p className="card-footer-item">
-								<a href={webSrc}>
+								<Link to={webSrc}>
 									<FontAwesomeIcon icon={faLaptop} />
-								</a>
+								</Link>
 							</p>
 							<p className="card-footer-item">
 								<a href={githubSrc}>

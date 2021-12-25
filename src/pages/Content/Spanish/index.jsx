@@ -102,11 +102,12 @@ export default class Spanish extends Component {
 		return (
 			<div className="page-spanish">
 				<article className="panel is-info">
-					<p className="panel-heading">Spanish Sayings that I Know</p>
-					<p className="panel-tabs">
+					<p className="panel-heading">Spanish Sayings</p>
+					<p className="panel-tabs" id="levels">
 						{this.state.levels.map((level) => {
 							return (
 								<a
+									href="#"
 									key={level.id}
 									className={level.id === this.state.selectedLevel.id ? 'is-active' : ''}
 									onClick={() => this.handleLevelChange(level.id)}
@@ -118,20 +119,20 @@ export default class Spanish extends Component {
 					</p>
 					<div className="panel-block">
 						<p className="control has-icons-left">
-							<label htmlFor="">
-								<input
-									onChange={(e) => this.handleSearchChange(e.target.value)}
-									className="input is-info"
-									type="text"
-									placeholder="Search"
-								/>
-							</label>
-							<span className="icon is-left">
+							<input
+								onChange={(e) => this.handleSearchChange(e.target.value)}
+								className="input is-info"
+								id="sayingInput"
+								type="text"
+								placeholder="Search"
+							/>
+
+							{/* <span className="icon is-left">
 								<i className="fas fa-search" aria-hidden="true" />
-							</span>
+							</span> */}
 						</p>
 					</div>
-					{this.state.sayings.map(this.renderSaying)}
+					<div id="sayingList">{this.state.sayings.map(this.renderSaying)}</div>
 				</article>
 			</div>
 		);

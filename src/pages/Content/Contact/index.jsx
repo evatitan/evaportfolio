@@ -27,59 +27,38 @@ export default class Contact extends Component {
 		const { name, subject, message } = this.state;
 		return (
 			<div className="contact-page">
-				<div className="columns">
-					<div className="column" />
-					<div className="column is-one-third">
-						<h2 className="contactTitle">Contact with me</h2>
-						<div className="field">
-							<label className="label">Name</label>
-							<div className="control">
-								<input
-									className="input"
-									type="text"
-									placeholder="Your name"
-									onChange={this.handleName}
-								/>
-							</div>
-						</div>
-
-						<div className="field">
-							<label className="label">Subject</label>
-							<div className="control">
-								<input
-									className="input"
-									type="text"
-									placeholder="Subject"
-									onChange={this.handleSubject}
-								/>
-							</div>
-						</div>
-						<div className="field">
-							<label className="label">Message</label>
-							<div className="control">
-								<textarea
-									className="textarea"
-									placeholder="Your message"
-									onChange={this.handleMessage}
-								/>
-							</div>
-						</div>
-						{/* <a href="#mail" />
-						<a id="mail" href="mailto:nowhere@mozilla.org">
-							Send email to nowhere
-						</a> */}
-						<div className="field is-grouped">
-							<div className="control">
-								<a
-									id="mail"
-									href={`mailto:yinguihua2014@gmail.com?subject=${subject}&body=${message}%0A---${name}`}
-								>
-									<span className="button is-link">Send Email</span>
-								</a>
-							</div>
+				<div className="contact-form">
+					<h2 className="contactTitle">Contact with me</h2>
+					<div className="field">
+						<label className="label">Name</label>
+						<div className="control">
+							<input className="input" type="text" placeholder="Your name" onChange={this.handleName} />
 						</div>
 					</div>
-					<div className="column" />
+
+					<div className="field">
+						<label className="label">Subject</label>
+						<div className="control">
+							<input className="input" type="text" placeholder="Subject" onChange={this.handleSubject} />
+						</div>
+					</div>
+					<div className="field">
+						<label className="label">Message</label>
+						<div className="control">
+							<textarea className="textarea" placeholder="Your message" onChange={this.handleMessage} />
+						</div>
+					</div>
+
+					<div className="field is-grouped">
+						<div className="control ">
+							<a
+								id="mail"
+								href={`mailto:yinguihua2014@gmail.com?subject=${subject}&body=${message}%0A---${name}`}
+							>
+								<span className="button is-link c">Send Email</span>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

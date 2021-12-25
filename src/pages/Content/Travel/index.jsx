@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import './index.css';
 import { places } from './places.json';
@@ -88,22 +88,16 @@ export default class Travel extends Component {
 
 	render() {
 		return (
-			<div>
+			<Fragment>
 				<div ref={this.mapContainer} className="map-container" />
-				<div className="columns travel-page">
-					<div className="column">
-						<h2>My Travel Map</h2>
-						<p className="description">
-							Life is like a journey, I don't care about the destination, but the scenery and the mood at
-							the view.
-						</p>
-						{/* <a href="#mail">go to mail</a> */}
-						{/* <a id="mail" href="mailto:nowhere@mozilla.org">
-							Send email to nowhere
-						</a> */}
-					</div>
+				<div className="travel-page">
+					<h2>My Travel Map</h2>
+					<p>
+						Life is like a journey, I don't care about the destination, but the scenery and the mood at the
+						view.
+					</p>
 				</div>
-			</div>
+			</Fragment>
 		);
 	}
 }

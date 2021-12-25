@@ -51,6 +51,9 @@ export default class index extends Component {
 							<MyNavLink to="/portfolio" className="navbar-item" style={{ fontSize: '20px' }}>
 								Portfolio
 							</MyNavLink>
+							{/* <MyNavLink to="/todoList" className="navbar-item" style={{ fontSize: '20px' }}>
+								todoList
+							</MyNavLink> */}
 
 							<div className="navbar-item has-dropdown is-hoverable">
 								<MyNavLink to="/language/spanish" className="navbar-link" style={{ fontSize: '20px' }}>

@@ -1,5 +1,5 @@
 .home-page {
-	height: 100vh;
+	height: 85vh;
 	color: #edf2f4;
 	display: flex;
 	align-items: center;
@@ -17,10 +17,8 @@
 }
 
 .my-postion {
-	display: flex;
 	color: white;
 	font-size: 2.5em;
-	text-align: center;
 	text-transform: uppercase;
 	margin-top: 30px;
 }
@@ -50,7 +48,7 @@
 
 @media only screen and (max-width: 375px) {
 	.home-page {
-		height: 100vh;
+		height: 80vh;
 		color: #edf2f4;
 		display: flex;
 		align-items: center;
@@ -62,15 +60,14 @@
 	.my-name {
 		display: flex;
 		color: white;
-		font-size: 1em;
+		font-size: 0.8em;
 		font-weight: 800;
 		text-transform: uppercase;
 	}
 
 	.my-postion {
-		display: flex;
 		color: white;
-		font-size: 2em;
+		font-size: 1.2em;
 		text-align: center;
 		text-transform: uppercase;
 		margin-top: 30px;
@@ -85,7 +82,7 @@
 		line-height: 100px;
 		background: #9d4edd;
 		border-radius: 5%;
-		animation: bulge 2.2s infinite;
+		animation: bulge 2.6s infinite;
 	}
 
 	.home-icon {

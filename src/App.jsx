@@ -6,6 +6,7 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/Content/About'));
 const Travel = lazy(() => import('./pages/Content/Travel'));
 const Portfolio = lazy(() => import('./pages/Content/Portfolio'));
+const TodoList = lazy(() => import('./pages/Content/TodoList'));
 const Spanish = lazy(() => import('./pages/Content/Spanish'));
 const Contact = lazy(() => import('./pages/Content/Contact'));
 const Footer = lazy(() => import('./pages/Footer'));
@@ -28,6 +29,9 @@ export default class App extends Component {
 						</Route>
 						<Route path="/portfolio">
 							<Portfolio />
+						</Route>
+						<Route path="/portfolio/todoList">
+							<TodoList />
 						</Route>
 						<Route path="/language/spanish">
 							<Spanish />

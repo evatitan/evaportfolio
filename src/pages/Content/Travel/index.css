@@ -1,23 +1,21 @@
 .map-container {
-	height: 450px;
+	height: 55vh;
 }
 
 .travel-page {
-	height: 480px !important;
+	height: 30vh !important;
 	background-color: #d7e3fc !important;
-	align-items: center !important;
-	justify-content: none !important;
-}
-
-h2 {
-	padding-top: 0px;
 	text-align: center;
 }
 
-.description {
-	text-align: left;
-	font-size: 1.3em;
-	padding-bottom: 30px;
+.travel-page h2 {
+	font-size: 2em;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.travel-page p {
+	font-size: 1.5em;
 }
 
 .mapboxgl-popup {
@@ -27,9 +25,26 @@ h2 {
 
 @media only screen and (max-width: 375px) {
 	.map-container {
-		height: 350px;
+		height: 55vh;
 	}
+
 	.travel-page {
-		height: 425px !important;
+		height: 25vh !important;
+		background-color: #d7e3fc !important;
+		text-align: center;
+	}
+
+	.travel-page h2 {
+		font-size: 1.5em;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+
+	.travel-page p {
+		font-size: 1.2em;
+	}
+	.mapboxgl-popup {
+		max-width: 250px;
+		font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	}
 }

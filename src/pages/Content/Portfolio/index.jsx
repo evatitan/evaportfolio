@@ -13,20 +13,20 @@ export default class Portfolio extends PureComponent {
 				name: 'Resume',
 				description: 'React',
 				img: evaResume,
-				webSrc: 'https://evatitan.es',
+				webSrc: '/home',
 				githubSrc: 'https://github.com/evatitan/perfil'
 			},
 			{
 				id: '002',
-				name: 'todoList',
+				name: 'TodoList',
 				description: 'react-redux',
 				img: todoList,
-				webSrc: 'https://github.com/evatitan/ReactApps',
+				webSrc: '/portfolio/todoList',
 				githubSrc: 'https://github.com/evatitan/ReactApps'
 			},
 			{
 				id: '003',
-				name: 'urTurn',
+				name: 'UrTurn',
 				description: 'Angular',
 				img: urTurn,
 				webSrc: 'https://urturn.herokuapp.com/',
