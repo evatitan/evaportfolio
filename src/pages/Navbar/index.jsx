@@ -6,49 +6,49 @@ import CV from './CV.pdf';
 import './index.css';
 
 export default class index extends Component {
-	// state = { isActive: '' };
+	state = { isActive: false };
 
 	handleBurger = () => {
-		// const { isActive } = this.state;
-		// this.setState({ isActive: 'is-active' });
+		this.setState({ isActive: !this.state.isActive });
 
-		const burgerIcon = document.querySelector('.navbar-burger');
-		const navbarMenu = document.querySelector('.navbar-menu');
-		burgerIcon.addEventListener('click', () => {
-			navbarMenu.classList.toggle('is-active');
-		});
+		// const burgerIcon = document.querySelector('.navbar-burger');
+		// const navbarMenu = document.querySelector('.navbar-menu');
+		// navbarMenu.classList.toggle('is-active');
+	};
+
+	handleLinkClicked = () => {
+		this.setState({ isActive: false });
 	};
 
 	render() {
 		return (
 			<nav className="navbar" role="navigation" aria-label="main navigation">
-				<div className="navbar-brand" onClick={this.handleBurger}>
-					<a
-						href="#"
+				<div className="navbar-brand">
+					<button
 						role="button"
+						onClick={this.handleBurger}
 						className="navbar-burger"
 						aria-label="menu"
 						aria-expanded="false"
-						data-target="navbarBasicExample"
 					>
 						<span aria-hidden="true" />
 						<span aria-hidden="true" />
 						<span aria-hidden="true" />
-					</a>
+					</button>
 				</div>
-				<div id="navbarBasicExample" className="navbar-menu">
+				<div className={'navbar-menu ' + (this.state.isActive === true ? 'is-active' : '')}>
 					<div className="navbar-start">
 						<div className="navbar-item">
-							<MyNavLink to="/home" className="navbar-item" style={{ fontSize: '20px' }}>
+							<MyNavLink onClick={this.handleLinkClicked} to="/home" className="navbar-item">
 								Home
 							</MyNavLink>
-							<MyNavLink to="/about" className="navbar-item" style={{ fontSize: '20px' }}>
+							<MyNavLink onClick={this.handleLinkClicked} to="/about" className="navbar-item">
 								About
 							</MyNavLink>
-							<MyNavLink to="/travel" className="navbar-item" style={{ fontSize: '20px' }}>
+							<MyNavLink onClick={this.handleLinkClicked} to="/travel" className="navbar-item">
 								Travel
 							</MyNavLink>
-							<MyNavLink to="/portfolio" className="navbar-item" style={{ fontSize: '20px' }}>
+							<MyNavLink onClick={this.handleLinkClicked} to="/portfolio" className="navbar-item">
 								Portfolio
 							</MyNavLink>
 							{/* <MyNavLink to="/todoList" className="navbar-item" style={{ fontSize: '20px' }}>
@@ -56,20 +56,24 @@ export default class index extends Component {
 							</MyNavLink> */}
 
 							<div className="navbar-item has-dropdown is-hoverable">
-								<MyNavLink to="/language/spanish" className="navbar-link" style={{ fontSize: '20px' }}>
+								<MyNavLink
+									onClick={this.handleLinkClicked}
+									to="/language/spanish"
+									className="navbar-link"
+								>
 									Language
 								</MyNavLink>
 								<div className="navbar-dropdown">
 									<MyNavLink
+										onClick={this.handleLinkClicked}
 										to="/language/spanish"
 										className="navbar-item"
-										style={{ fontSize: '15px' }}
 									>
 										Spanish
 									</MyNavLink>
 								</div>
 							</div>
-							<MyNavLink to="/contact" className="navbar-item" style={{ fontSize: '20px' }}>
+							<MyNavLink onClick={this.handleLinkClicked} to="/contact" className="navbar-item">
 								Contact
 							</MyNavLink>
 						</div>
