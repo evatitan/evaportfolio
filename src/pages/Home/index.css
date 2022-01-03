@@ -1,5 +1,5 @@
 .home-page {
-	height: 90vh;
+	height: 93vh;
 	color: #edf2f4;
 	display: flex;
 	align-items: center;
@@ -48,7 +48,7 @@
 
 @media only screen and (max-width: 375px) {
 	.home-page {
-		height: 100vh;
+		height: 95vh;
 		color: #edf2f4;
 		display: flex;
 		align-items: center;
