@@ -16,22 +16,20 @@ import './index.css';
 export default class Footer extends Component {
 	render() {
 		return (
-			<footer className="footer">
-				<span>
-					<img className="footIcon" src={HTML5} alt="icons" />
-					<img className="footIcon" src={CSS3} alt="icons" />
-					<img className="footIcon" src={JS} alt="icons" />
-					<img className="footIcon" src={TS} alt="icons" />
-					<img className="footIcon" src={BOOTSTRAP} alt="icons" />
-					<img className="footIcon" src={BULMA} alt="icons" />
-					<img className="footIcon" src={REACT} alt="icons" />
-					<img className="footIcon" src={ANGULAR} alt="icons" />
-					<img className="footIcon" src={LINUX} alt="icons" />
-					<img className="footIcon" src={NODE} alt="icons" />
-					<img className="footIcon" src={MONGODB} alt="icons" />
-					<img className="footIcon" src={MYSQL} alt="icons" />
-				</span>
-			</footer>
+			<div className="footer-page">
+				<img className="footIcon" src={HTML5} alt="icons" />
+				<img className="footIcon" src={CSS3} alt="icons" />
+				<img className="footIcon" src={JS} alt="icons" />
+				<img className="footIcon" src={TS} alt="icons" />
+				<img className="footIcon" src={BOOTSTRAP} alt="icons" />
+				<img className="footIcon" src={BULMA} alt="icons" />
+				<img className="footIcon" src={REACT} alt="icons" />
+				<img className="footIcon" src={ANGULAR} alt="icons" />
+				<img className="footIcon" src={LINUX} alt="icons" />
+				<img className="footIcon" src={NODE} alt="icons" />
+				<img className="footIcon" src={MONGODB} alt="icons" />
+				<img className="footIcon" src={MYSQL} alt="icons" />
+			</div>
 		);
 	}
 }
