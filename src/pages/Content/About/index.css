@@ -1,80 +1,57 @@
 .about-page {
-	height: 85vh;
+	height: 93vh;
 	align-items: center;
 	justify-content: center;
-	background-color: #edf2f4;
+	align-content: center;
+	background-color: #d5dbdb;
 }
-
-.about h2 {
-	padding-left: 10%;
-	font-size: 2em;
-	text-align: center;
+.titleContainer {
+	padding-top: 150px;
+	margin-left: 150px;
 }
-.about p {
-	padding-left: 10%;
-	font-size: 1.5em;
+.subtitle {
+	padding-top: 20px;
 }
-.about p::first-letter {
-	font-size: 1.3em;
-	color: orange;
-}
-
-.about-img {
-	align-items: center;
+.image img {
 	border-radius: 2%;
-	width: 100%;
-	height: 100%;
 	transition: all 0.5s linear;
 }
-.about-img:hover {
-	transform: scale(0.8);
-	border-radius: 10%;
+
+img:hover {
+	transform: scale(0.95);
+	border-radius: 2%;
 }
 
-.details h2 {
-	padding-left: 10%;
-	font-size: 2em;
-	text-align: center;
-}
-.details p {
-	padding-left: 10%;
-	font-size: 1.5em;
+@media only screen and (max-width: 860px) {
+	.about-page {
+		height: 95vh !important;
+	}
+	.titleContainer {
+		padding-top: 80px;
+		margin-left: 0px;
+	}
+	.title {
+		font-size: 1.5rem;
+	}
+	.subtitle {
+		font-size: 1.1rem;
+		padding-top: 0px;
+	}
 }
 
 @media only screen and (max-width: 375px) {
 	.about-page {
-		align-items: center;
-		justify-content: center;
-		background-color: #edf2f4;
-		height: 85vh;
+		height: 95vh !important;
 	}
-	.about h2 {
-		margin-top: 55px;
-		text-align: center;
-		font-size: 1.5em;
+	.titleContainer {
+		padding-top: 55px;
+		margin-left: 0px;
 	}
-	.about p {
-		padding-left: 10%;
-		font-size: 1.1em;
+	.title {
+		font-size: 1.1rem;
 	}
-	.about p::first-letter {
-		font-size: 1.1em;
-		color: orange;
-	}
-
-	.about-img {
-		align-items: center;
-		border-radius: 4%;
-		width: 100%;
-		height: 100%;
-	}
-
-	.details h2 {
-		text-align: center;
-		font-size: 1.5em;
-	}
-	.details p {
-		padding-left: 10%;
-		font-size: 1.1em;
+	.subtitle {
+		font-size: 0.9rem;
+		padding-top: 0px;
 	}
 }
