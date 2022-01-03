@@ -1,3 +1,6 @@
+.page-spanish {
+	height: 93vh;
+}
 .sayingMeans {
 	padding-left: 35px;
 	border: 1px solid #ffffff;
@@ -34,4 +37,47 @@
 
 #sayingList {
 	margin-top: 185px;
+}
+
+@media only screen and (max-width: 375px) {
+	.page-spanish {
+		height: 95vh;
+	}
+	.sayingMeans {
+		padding-left: 35px;
+		border: 1px solid #ffffff;
+	}
+
+	.panel-heading {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 50px;
+		position: fixed;
+		width: 100%;
+	}
+	.panel-tabs {
+		text-align: center;
+	}
+
+	#levels {
+		font-weight: 50px;
+		font-size: 1.2em;
+		position: fixed;
+		align-items: center;
+		text-align: center;
+		margin-top: 110px !important;
+		background-color: white;
+		width: 100%;
+	}
+
+	#sayingInput {
+		position: fixed;
+		width: 100%;
+		margin-top: 150px !important;
+		margin-left: -12px;
+	}
+
+	#sayingList {
+		margin-top: 185px;
+	}
 }
