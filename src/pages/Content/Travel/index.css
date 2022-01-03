@@ -1,5 +1,5 @@
 .map-container {
-	height: 55vh;
+	height: 63vh;
 }
 
 .travel-page {
@@ -29,7 +29,7 @@
 	}
 
 	.travel-page {
-		height: 25vh !important;
+		height: 40vh !important;
 		background-color: #d7e3fc !important;
 		text-align: center;
 	}
