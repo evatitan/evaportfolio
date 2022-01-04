@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MyNavLink from '../../components/MyNavLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import CV from './CV.pdf';
+import CV from '../../assets/CV.pdf';
 import './index.css';
 
 export default class index extends Component {
@@ -25,7 +25,6 @@ export default class index extends Component {
 			<nav className="navbar" role="navigation" aria-label="main navigation">
 				<div className="navbar-brand">
 					<button
-						role="button"
 						onClick={this.handleBurger}
 						className="navbar-burger"
 						aria-label="menu"

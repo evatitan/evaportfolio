@@ -9,4 +9,12 @@ div .todo_btn {
 
 .footer_info {
 	color: #013a63;
+	font-size: 1.25rem;
+}
+
+@media screen and (max-width: 375px) {
+	.footer_info {
+		color: #013a63;
+		font-size: 1rem;
+	}
 }

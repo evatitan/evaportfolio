@@ -53,6 +53,7 @@ export default class Contact extends Component {
 						<div className="control ">
 							<a
 								id="mail"
+								target="_top"
 								href={`mailto:yinguihua2014@gmail.com?subject=${subject}&body=${message}%0A---${name}`}
 							>
 								<span className="button is-link c">Send Email</span>

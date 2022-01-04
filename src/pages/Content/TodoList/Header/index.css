@@ -1,6 +1,7 @@
 .todo_header {
 	text-align: center;
 	border-radius: 5px;
+	padding-top: 100px;
 }
 
 .todo_header input {
@@ -19,4 +20,11 @@
 
 .todo_header h2 {
 	color: #013a63;
+	font-size: 2rem;
+}
+
+@media screen and (max-width: 375px) {
+	.todo_header h2 {
+		font-size: 1.5rem;
+	}
 }

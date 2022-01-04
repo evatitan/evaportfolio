@@ -18,28 +18,31 @@ export default class App extends Component {
 				<Suspense fallback={<Loading />}>
 					<Navbar />
 					<Switch>
-						<Route path="/home">
+						<Route exact path="/home">
 							<Home />
 						</Route>
-						<Route path="/about">
+						<Route exact path="/about">
 							<About />
 						</Route>
-						<Route path="/travel">
+						<Route exact path="/travel">
 							<Travel />
 						</Route>
-						<Route path="/portfolio">
+						<Route exact path="/portfolio">
 							<Portfolio />
 						</Route>
-						<Route path="/portfolio/todoList">
+						<Route exact path="/portfolio/todoList">
 							<TodoList />
 						</Route>
-						<Route path="/language/spanish">
+						<Route exact path="/language/spanish">
 							<Spanish />
 						</Route>
-						<Route path="/contact">
+						<Route exact path="/contact">
 							<Contact />
 						</Route>
-						<Redirect to="/home" />
+						<Route exact path="/">
+							<Home />
+						</Route>
+						<Redirect to="/" />
 					</Switch>
 					<Footer />
 				</Suspense>

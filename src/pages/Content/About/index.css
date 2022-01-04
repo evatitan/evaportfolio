@@ -1,23 +1,23 @@
 .about-page {
-	height: 93vh;
+	height: 95vh;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
-	background-color: #d5dbdb;
+	background-color: #edf2f4;
 }
 .titleContainer {
-	padding-top: 150px;
+	padding-top: 200px;
 	margin-left: 150px;
 }
 .subtitle {
-	padding-top: 20px;
+	padding-top: 30px;
 }
 .image img {
 	border-radius: 2%;
 	transition: all 0.5s linear;
 }
 
-img:hover {
+.selfImage:hover {
 	transform: scale(0.95);
 	border-radius: 2%;
 }

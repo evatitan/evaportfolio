@@ -5,7 +5,7 @@
 .todo_item {
 	list-style: none;
 	height: 45px;
-	padding-top: 6px;
+	padding-top: 4px;
 	word-wrap: break-word;
 	word-break: break-all;
 	overflow: hidden;
@@ -13,9 +13,19 @@
 
 li .todo_btn {
 	float: right;
-	width: 58px;
+	width: 60px;
 }
 
 .todo_name {
 	color: #013a63;
+	font-size: 1.25rem;
+	margin-left: 2px;
+}
+
+@media screen and (max-width: 375px) {
+	.todo_name {
+		color: #013a63;
+		font-size: 1rem;
+		margin-left: 2px;
+	}
 }

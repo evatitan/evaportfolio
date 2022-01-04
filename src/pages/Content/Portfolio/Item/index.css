@@ -1,38 +1,23 @@
-.page-item {
-	width: 100% !important;
-}
-
-.card {
-	width: auto;
-	padding: 3%;
-	background-color: #bbdefb;
-}
-
 .card-content {
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .projectImg {
-	height: 300px !important;
-	width: 400px !important;
+	height: 350px !important;
+	width: 100% !important;
 }
 
 @media only screen and (max-width: 375px) {
-	.page-item {
-		width: 100% !important;
-	}
-
-	.card {
-		width: 100%;
-		background-color: #bbdefb;
-	}
-
 	.card-content {
-		font-size: 1.1em;
+		font-size: 0.9rem;
 	}
 
 	.projectImg {
-		height: 300px !important;
-		width: 400px !important;
+		height: 180px !important;
+		width: 100% !important;
+	}
+	.column {
+		width: 375px !important;
+		margin-left: 22px;
 	}
 }

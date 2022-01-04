@@ -1,8 +1,8 @@
 import React, { PureComponent, Fragment } from 'react';
 import Item from './Item';
-import urTurn from './urturn.png';
-import evaResume from './evaResume.png';
-import todoList from './todoList.png';
+import urTurn from '../../../assets/urturn.png';
+import evaResume from '../../../assets/evaResume.png';
+import todoList from '../../../assets/todoList.png';
 import './index.css';
 
 export default class Portfolio extends PureComponent {
@@ -48,14 +48,16 @@ export default class Portfolio extends PureComponent {
 		const { projects } = this.state;
 		return (
 			<Fragment>
-				<div className="columns page-portfolio">
-					{this.state.hasError ? (
-						<h2>The internet is bad, please try it later.</h2>
-					) : (
-						projects.map((projectObj) => {
-							return <Item key={projectObj.id} {...projectObj} />;
-						})
-					)}
+				<div className="page-portfolio">
+					<div className="columns is-mobile is-multiline is-centered myColumns">
+						{this.state.hasError ? (
+							<h2>The internet is bad, please try it later.</h2>
+						) : (
+							projects.map((projectObj) => {
+								return <Item key={projectObj.id} {...projectObj} />;
+							})
+						)}
+					</div>
 				</div>
 			</Fragment>
 		);

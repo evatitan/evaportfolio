@@ -12,8 +12,8 @@ export default class Item extends PureComponent {
 	render() {
 		const { name, description, img, webSrc, githubSrc } = this.props;
 		return (
-			<div className='item-page'>
-				<div className="column page-item">
+			<React.Fragment>
+				<div className="column is-one-quarter">
 					<div className="card">
 						<div className="card-image">
 							<figure className="image">
@@ -22,27 +22,22 @@ export default class Item extends PureComponent {
 						</div>
 
 						<div className="card-content">
-							<p>
-								<strong>{name}</strong>
-								<br /> <i>{description}</i>
-							</p>
+							<strong>{name}</strong>
+							<br /> <i>{description}</i>
 						</div>
 
 						<footer className="card-footer">
-							<p className="card-footer-item">
-								<Link to={webSrc}>
-									<FontAwesomeIcon icon={faLaptop} />
-								</Link>
-							</p>
-							<p className="card-footer-item">
-								<a href={githubSrc}>
-									<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
-								</a>
-							</p>
+							<Link to={webSrc} className="card-footer-item">
+								<FontAwesomeIcon icon={faLaptop} />
+							</Link>
+
+							<a href={githubSrc} className="card-footer-item">
+								<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
+							</a>
 						</footer>
 					</div>
 				</div>
-			</div>
+			</React.Fragment>
 		);
 	}
 }
