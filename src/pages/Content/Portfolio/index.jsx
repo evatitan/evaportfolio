@@ -14,6 +14,7 @@ export default class Portfolio extends PureComponent {
 				description: 'React',
 				img: evaResume,
 				webSrc: '/home',
+				internal: true,
 				githubSrc: 'https://github.com/evatitan/perfil'
 			},
 			{
@@ -22,6 +23,7 @@ export default class Portfolio extends PureComponent {
 				description: 'react-redux',
 				img: todoList,
 				webSrc: '/portfolio/todoList',
+				internal: true,
 				githubSrc: 'https://github.com/evatitan/ReactApps'
 			},
 			{
@@ -29,6 +31,7 @@ export default class Portfolio extends PureComponent {
 				name: 'UrTurn',
 				description: 'Angular',
 				img: urTurn,
+				internal: false,
 				webSrc: 'https://urturn.herokuapp.com/',
 				githubSrc: 'https://github.com/evatitan/UrTurn'
 			}

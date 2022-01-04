@@ -10,7 +10,7 @@ library.add(fab, faLaptop);
 
 export default class Item extends PureComponent {
 	render() {
-		const { name, description, img, webSrc, githubSrc } = this.props;
+		const { name, description, img, webSrc, internal, githubSrc } = this.props;
 		return (
 			<React.Fragment>
 				<div className="column is-one-quarter">
@@ -27,11 +27,19 @@ export default class Item extends PureComponent {
 						</div>
 
 						<footer className="card-footer">
-							<Link to={webSrc} className="card-footer-item">
-								<FontAwesomeIcon icon={faLaptop} />
-							</Link>
+							{internal && (
+								<Link to={webSrc} className="card-footer-item">
+									<FontAwesomeIcon icon={faLaptop} />
+								</Link>
+							)}
 
-							<a href={githubSrc} className="card-footer-item">
+							{!internal && (
+								<a href={webSrc} target="_blank" rel="noopener" className="card-footer-item">
+									<FontAwesomeIcon icon={faLaptop} />
+								</a>
+							)}
+
+							<a href={githubSrc} rel="noopener" target="_blank" className="card-footer-item">
 								<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
 							</a>
 						</footer>
