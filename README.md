@@ -1,5 +1,5 @@
-# Resume Web
-This repository is a simple React Web.
+# My Perfil
+This repository is a React project.
 
 ## Project Description
-After learned the React, I built this Resume Web with it. The web: http://evatitan.es
+The Web: http://evatitan.es
