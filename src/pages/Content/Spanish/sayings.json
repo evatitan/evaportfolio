@@ -637,6 +637,20 @@
 			"means": "Estar distraído, despistado.",
 			"example": "La profesora estaba explicando el ejercicio y él no hacía en nicaso, estaba en Babia.",
 			"level": 1
+		},
+		{
+			"id": "89",
+			"title": "!Al turrón¡",
+			"means": "Es decir, ir a lo mollar y dejarse de chorradas.",
+			"example": "Vamos a lo que vamos, al grano,!Al turrón¡",
+			"level": 1
+		},
+		{
+			"id": "90",
+			"title": "no irse por los cerros de Úbeda.",
+			"means": "Ir a lo mollar y dejarse de chorradas.",
+			"example": "Vamos a lo que vamos, al grano,no irse por los cerros de Úbeda.",
+			"level": 1
 		}
 	]
 }
