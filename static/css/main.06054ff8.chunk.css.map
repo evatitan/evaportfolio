@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/Loading/index.css"],"names":[],"mappings":"AAAA,GACC,iBAAkB,CAClB,cAAe,CACf,aAAc,CACd,aAAc,CACd,sBACD","file":"main.06054ff8.chunk.css","sourcesContent":["h1 {\n\ttext-align: center;\n\tmargin-top: 20%;\n\tcolor: #a2d2ff;\n\tfont-size: 3em;\n\tjustify-content: center;\n}\n"]}
