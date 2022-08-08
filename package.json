@@ -1,6 +1,6 @@
 {
 	"name": "my_resume",
-	"homepage": "https://evatitan.github.io",
+	"homepage": "https://evatitan.github.io/evatitan",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -13,7 +13,6 @@
 		"@testing-library/user-event": "^12.8.3",
 		"axios": "^0.24.0",
 		"bulma": "^0.9.3",
-		"gh-pages": "^4.0.0",
 		"less": "^3.13.0",
 		"less-loader": "^7.1.0",
 		"mapbox-gl": "^2.6.1",
@@ -50,5 +49,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"gh-pages": "^4.0.0"
 	}
 }
