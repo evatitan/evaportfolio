@@ -10,8 +10,8 @@ export default class index extends React.Component {
 			<div className="todo_page">
 				<div className="todo_wrap">
 					<Header />
-					<Foot />
 					<List />
+					<Foot />
 				</div>
 			</div>
 		);

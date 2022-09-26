@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowCircleDown, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import './index.css';
 library.add(fab, faArrowCircleDown);
@@ -26,11 +26,10 @@ export default class Home extends Component {
 			let mins = currentTime.getMinutes();
 			let secs = currentTime.getSeconds();
 			let period = 'AM';
-			if (hrs == 0) {
-				return hrs == 12;
+			if (hrs === 0) {
+				return hrs === 12;
 			} else if (hrs >= 12) {
 				return (hrs = hrs - 12);
-				period = 'PM';
 			}
 			hrs = hrs < 10 ? '0' + hrs : hrs;
 			mins = mins < 10 ? '0' + mins : mins;

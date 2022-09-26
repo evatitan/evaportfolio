@@ -3,7 +3,7 @@ import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-load
 import './index.css';
 import { places } from './places.json';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZXZhdGl0YW4iLCJhIjoiY2t3dnpybmliMW8yYzJxbHN2YzZjbTl0bCJ9.10T6Bwu36_Ir3xaAUZuG0A';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZXZhdGl0YW4iLCJhIjoiY2w3bnU3cDMwMDdicTNubzE1bmp1b3o5NCJ9.iF0nA5sh1E619qs_z4_vlw';
 
 export default class Travel extends Component {
 	constructor(props) {
@@ -86,8 +86,10 @@ export default class Travel extends Component {
 				<div className="travel-page">
 					<h2>My Travel Map</h2>
 					<p>
-						Life is like a journey, I don't care about the destination, but the scenery and the mood at the
-						view.
+						What I can learn from on the trip? I love to learn about various cultures, food and even the
+						language. I also love to learn how each place is different from mine.
+						<br />
+						喜欢旅游，喜欢生活
 					</p>
 				</div>
 			</Fragment>
