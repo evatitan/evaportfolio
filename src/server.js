@@ -3,7 +3,7 @@ const axios = require('axios');
 const app = express();
 const port = 3000;
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
 	const { q } = req.query;
 	axios({
 		url: 'https://localhost:3000/evatitan',
