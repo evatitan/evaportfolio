@@ -72,7 +72,7 @@ export default class Spanish extends Component {
 
 		return (
 			<div key={saying.id}>
-				<a className="panel-block is-active" href="#" onClick={(e) => this.handleSayingClick(saying.id)}>
+				<a className="panel-block is-active" href="/" onClick={(e) => this.handleSayingClick(saying.id)}>
 					<span className="panel-icon">
 						<FontAwesomeIcon icon={faBook} />
 						<i className="fas fa-book" aria-hidden="false" />
@@ -107,7 +107,7 @@ export default class Spanish extends Component {
 						{this.state.levels.map((level) => {
 							return (
 								<a
-									href="#"
+									href="/"
 									key={level.id}
 									className={level.id === this.state.selectedLevel.id ? 'is-active' : ''}
 									onClick={() => this.handleLevelChange(level.id)}

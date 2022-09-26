@@ -34,12 +34,12 @@ export default class Item extends PureComponent {
 							)}
 
 							{!internal && (
-								<a href={webSrc} target="_blank" rel="noopener" className="card-footer-item">
+								<a href={webSrc} rel="noopener" className="card-footer-item">
 									<FontAwesomeIcon icon={faLaptop} />
 								</a>
 							)}
 
-							<a href={githubSrc} rel="noopener" target="_blank" className="card-footer-item">
+							<a href={githubSrc} rel="noopener" className="card-footer-item">
 								<FontAwesomeIcon icon={[ 'fab', 'github' ]} />
 							</a>
 						</footer>
