@@ -1,32 +1,36 @@
 .home-page {
-	height: 95vh;
-	color: #edf2f4;
+	width: 100%;
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	background-color: #2980b9;
+	padding: 0 20px;
+	box-sizing: border-box;
+	color: white;
+	background: radial-gradient(circle at center,
+		rgba(107, 33, 168, 1) 0%,    /* Darker purple center */
+		rgba(157, 78, 221, 0.8) 30%, /* Your existing purple with transparency */
+		rgba(157, 78, 221, 0.3) 60%, /* More transparent */
+		rgba(255, 255, 255, 1) 100%); /* White background */
+		animation: slideUp 1s ease-out;
 }
 
 .my-name {
 	display: flex;
-	color: white;
+	color: #fff;
 	font-size: 2.5em;
 	font-weight: 600;
 	text-transform: uppercase;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.my-postion {
-	color: white;
-	font-size: 2.5em;
+.my-position {
+	color: #fff;
+	font-size: 2em;
 	text-transform: uppercase;
 	margin-top: 30px;
-}
-
-#time{
-	color: white;
-	font-size: 2.5em;
-	margin-top: 30px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .home-contact {
@@ -35,9 +39,7 @@
 
 .homeSpan {
 	padding: 0 20px;
-	line-height: 100px;
-	background: #9d4edd;
-	border-radius: 5%;
+	color:white;
 	animation: bulge 2.2s infinite;
 }
 
@@ -45,66 +47,71 @@
 	font-size: 2.5em;
 	color: white;
 }
+
 @keyframes bulge {
 	50% {
-		box-shadow: 0 20px 0 #eae4e9;
 		transform: translateY(-30px);
 	}
 }
 
-@media only screen and (max-width: 375px) {
+.home-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
 	.home-page {
-		height: 95vh;
-		color: #edf2f4;
+		min-height: 100vh;
 		display: flex;
 		align-items: center;
 		text-align: center;
 		justify-content: center;
-		background-color: #2980b9;
+		background: radial-gradient(circle at center,
+			rgba(107, 33, 168, 1) 0%,
+			rgba(157, 78, 221, 0.8) 40%,
+			rgba(157, 78, 221, 0.3) 70%,
+			rgba(255, 255, 255, 1) 100%);
 	}
 
 	.my-name {
 		display: flex;
 		color: white;
-		font-size: 0.8em;
-		font-weight: 800;
+		font-size: 1em;
+		font-weight: 500;
 		text-transform: uppercase;
 	}
 
-	.my-postion {
-		color: white;
-		font-size: 1.2em;
+	.my-position {
+		font-size: 0.8em;
 		text-align: center;
 		text-transform: uppercase;
-		margin-top: 30px;
+		margin-top: 20px;
 	}
 
-	#time{
-		color: white;
-		font-size: 1.2em;
-		margin-top: 30px;
-	}
 
 	.home-contact {
 		margin-top: 30px;
 	}
 
 	.homeSpan {
-		padding: 0 15px;
-		line-height: 100px;
-		background: #9d4edd;
-		border-radius: 5%;
-		animation: bulge 2.6s infinite;
+		padding: 0 10px;
+		animation: simpleBulge 3s infinite;
+		box-shadow: none;
 	}
 
 	.home-icon {
-		font-size: 1.5em;
+		font-size: 1em;
 		color: white;
 	}
 
-	@keyframes bulge {
+	.my-name, .my-position {
+		color: #fff;
+		text-shadow: none;
+	}
+
+	@keyframes simpleBulge {
 		50% {
-			box-shadow: 0 20px 0 #eae4e9;
 			transform: translateY(-30px);
 		}
 	}

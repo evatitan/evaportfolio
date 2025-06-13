@@ -1,0 +1,30 @@
+.header-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-right: 2rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #007bff;
+}

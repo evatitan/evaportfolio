@@ -1,57 +1,106 @@
 .about-page {
-	height: 95vh;
+	height: 100vh;
+	width: 100%;
+	/* max-width: 1000px; */
+	padding: 2rem;
+	display: flex;
 	align-items: center;
 	justify-content: center;
-	align-content: center;
-	background-color: #edf2f4;
+	background: radial-gradient(circle at center,
+		rgba(45, 149, 150, 1) 0%,
+		rgba(75, 179, 180, 0.8) 40%,
+		rgba(75, 179, 180, 0.3) 85%,
+		rgba(255, 255, 255, 1) 100%);
 }
-.titleContainer {
-	padding-top: 200px;
-	margin-left: 150px;
+
+.about-container {
+	width: 100%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr;
+	align-items: center;
+	padding: 20rem;
+	animation: slideUp 1s ease-out;
 }
-.subtitle {
-	padding-top: 30px;
+
+@keyframes slideUp {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
-.image img {
-	border-radius: 2%;
-	transition: all 0.5s linear;
+
+.about-text {
+	width: 80%;
+	flex: 1;
+	color: white;
+	font-size: 2rem;
+	animation: slideUp 1s ease-out 0.2s;
+	animation-fill-mode: backwards;
+}
+
+.about-image {
+	flex: 1;
+	grid-template-columns: repeat(2, 1fr);
+	animation: slideUp 1s ease-out 0.4s;
+	animation-fill-mode: backwards;
+}
+
+.selfImage {
+	width: 80%;
+	border-radius: 30% 80%;
+	transition: all 0.3s ease;
+	opacity: 0.6;
 }
 
 .selfImage:hover {
-	transform: scale(0.95);
-	border-radius: 2%;
+	transform: scale(1.05);
+	opacity: 0.6;
 }
 
-@media only screen and (max-width: 860px) {
-	.about-page {
-		height: 95vh !important;
-	}
-	.titleContainer {
-		padding-top: 80px;
-		margin-left: 0px;
-	}
-	.title {
-		font-size: 1.5rem;
-	}
-	.subtitle {
-		font-size: 1.1rem;
-		padding-top: 0px;
-	}
+@media only screen and (max-width: 1200px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .about-text {
+        width: 100%;
+        font-size: 1.5rem;
+        order: 2;
+    }
+    
+    .about-image {
+        width: 100%;
+        order: 1;
+    }
+    
+    .selfImage {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 
+/* iPhone SE, iPhone 8 and smaller */
 @media only screen and (max-width: 375px) {
-	.about-page {
-		height: 95vh !important;
-	}
-	.titleContainer {
-		padding-top: 55px;
-		margin-left: 0px;
-	}
-	.title {
-		font-size: 1.1rem;
-	}
-	.subtitle {
-		font-size: 0.9rem;
-		padding-top: 0px;
-	}
+    .about-text {
+        font-size: 1.2rem;
+    }
+    
+    .selfImage {
+        width: 80%;
+    }
+}
+
+/* iPhone 12/13/14 */
+@media only screen and (max-width: 390px) {
+    .about-container {
+        padding: 0.5rem;
+    }
 }

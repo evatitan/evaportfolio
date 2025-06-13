@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: auto;
+}
+
+section {
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
