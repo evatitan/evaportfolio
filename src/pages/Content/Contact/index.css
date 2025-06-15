@@ -3,6 +3,7 @@
 	height: 95vh;
 	align-content: center;
 	animation: slideUp 1s ease-out;
+	color: grey;
 }
 .contact-form {
 	align-content: center;
@@ -10,12 +11,14 @@
 	padding-left: 30%;
 	padding-right: 30%;
 	width: auto;
+	color: grey;
 }
 .contactTitle {
 	font-size: 2em;
 	margin-bottom: 50px;
 	margin-top: 50px;
 	text-align: center;
+	color: grey;
 }
 
 

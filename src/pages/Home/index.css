@@ -1,11 +1,14 @@
 .home-page {
 	width: 100%;
 	min-height: 100vh;
+	height: 110vh; /* Force full viewport height */
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	padding: 0 20px;
+	padding: 4rem 20px; /* Add top padding for navbar */
+	margin: 0;
 	box-sizing: border-box;
 	color: white;
 	background: radial-gradient(circle at center,
@@ -23,6 +26,7 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	justify-content: center;
 }
 
 .my-position {
@@ -48,6 +52,27 @@
 	color: white;
 }
 
+.about-image {
+	flex: 1;
+	grid-template-columns: repeat(2, 1fr);
+	animation: slideUp 1s ease-out 0.4s;
+	animation-fill-mode: backwards;
+}
+
+.self-image {
+	width: 300px;  /* Smaller image size */
+	height: 280px;
+	border-radius: 50% ;
+	transition: all 0.3s ease;
+	opacity: 0.8;
+	margin-bottom: 50px;
+}
+
+.self-image:hover {
+	transform: scale(1.05);
+	opacity: 0.6;
+}
+
 @keyframes bulge {
 	50% {
 		transform: translateY(-30px);
@@ -55,18 +80,22 @@
 }
 
 .home-content {
-	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	max-width: 1000px;
 	margin: 0 auto;
 	width: 100%;
 }
 
 @media only screen and (max-width: 400px) {
 	.home-page {
+		height: 100vh;  /* Force full viewport height on mobile */
 		min-height: 100vh;
-		display: flex;
-		align-items: center;
-		text-align: center;
-		justify-content: center;
+		margin: 0;
+		padding: 3rem 20px; /* Smaller top padding for mobile */
 		background: radial-gradient(circle at center,
 			rgba(107, 33, 168, 1) 0%,
 			rgba(157, 78, 221, 0.8) 40%,
@@ -97,6 +126,11 @@
 	.my-name, .my-position {
 		color: #fff;
 		text-shadow: none;
+	}
+
+	.selfImage {
+		width: 150px;
+		height: 150px;
 	}
 
 	@keyframes simpleBulge {

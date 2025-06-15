@@ -38,7 +38,7 @@ export default class Contact extends Component<{}, ContactState> {
         <div className="contact-form">
           <h1 className="contactTitle">Contact with me</h1>
           <div className="field">
-            <label className="label">Name</label>
+            <label>Name</label>
             <div className="control">
               <input
                 className="input"
@@ -50,7 +50,7 @@ export default class Contact extends Component<{}, ContactState> {
           </div>
 
           <div className="field">
-            <label className="label">Subject</label>
+            <label>Subject</label>
             <div className="control">
               <input
                 className="input"
@@ -61,7 +61,7 @@ export default class Contact extends Component<{}, ContactState> {
             </div>
           </div>
           <div className="field">
-            <label className="label">Message</label>
+            <label>Message</label>
             <div className="control">
               <textarea
                 className="textarea"

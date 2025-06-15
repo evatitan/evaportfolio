@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-
+import eva from '../../../src/assets/eva.jpeg';
 import './index.css';
 library.add(fab, faArrowCircleDown);
 
@@ -42,15 +42,18 @@ export default class Home extends Component<{}, HomeState> {
         {isLoading ? (
           <div className="loading">Loading...</div>
         ) : (
-          <div className="home-presentation">
-            <div className="my-name">Guihua Yin</div>
-            <div className="my-position">
-              Full Stack Web Developer
-              <br />
-              Base in Spain
+          <>
+            <div className="home-presentation">
+              <img className="self-image" src={eva} alt="eva" />
+              <div className="my-name">Guihua Yin</div>
+              <div className="my-position">
+                A passionate <strong>Full Stack Web Developer</strong> and educator
+                <br />
+                Base in Spain
+                <br />
+              </div>
             </div>
-            <div id="clock">{/* <DigitalClock /> */}</div>
-          </div>
+          </>
         )}
       </div>
     );

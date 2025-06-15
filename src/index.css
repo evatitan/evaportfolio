@@ -13,3 +13,60 @@ section {
   padding: 80px 20px;
   box-sizing: border-box;
 }
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --nav-bg: #f8f9fa;
+  --card-bg: #ffffff;
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --nav-bg: #2d2d2d;
+  --card-bg: #333333;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  background-color: var(--nav-bg);
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode .navbar {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .navbar-item {
+  color: #ffffff;
+}
+
+.dark-mode .button.is-ghost {
+  color: #ffffff;
+}
+
+.dark-mode .button.is-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add dark mode styles for other components */
+.dark-mode .tech-stack,
+.dark-mode .about-page,
+.dark-mode .portfolio-page,
+.dark-mode .contact-page {
+  background: radial-gradient(circle at center,
+    rgba(45, 45, 45, 1) 0%,
+    rgba(45, 45, 45, 0.8) 40%,
+    rgba(45, 45, 45, 0.3) 85%,
+    var(--bg-color) 100%);
+}

@@ -1,11 +1,72 @@
 .navbar {
 	width: 100%;
-	height: auto;
+	height: 8rem;
 	position: fixed;
-	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	background-color: transparent;
+	backdrop-filter: blur(5px);
+	transition: all 0.3s ease;
+	z-index: 1000;
 }
+
+.navbar.scrolled {
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+}
+
+.navbar-menu {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	background: transparent;
+}
+
 .navbar-item {
-	font-size: 20px;
+	font-size: 2rem; 
+	padding: 0.5rem 1.5rem; 
+	color: var(--text-color);
+	transition: all 0.3s ease;
+	font-weight: 500;
+	background: transparent;
+}
+
+.navbar-item:hover,
+.navbar-item:active,
+.navbar-item:focus {
+	background: transparent !important;
+	transform: scale(1.1);
+}
+
+.navbar-start {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	margin-right: auto;
+	padding-left: 2rem;
+}
+
+.navbar-end {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-left: auto;
+	padding-right: 2rem;
+}
+
+.button.is-ghost {
+	font-size: 1.5rem;  /* Match menu text size */
+}
+
+.button.is-info {
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
 }
 
 @media only screen and (max-width: 375px) {
@@ -14,5 +75,20 @@
 		height: auto;
 		position: fixed;
 		top: 0;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.navbar {
+		padding: 0;
+	}
+	
+	.navbar-menu.is-active {
+		position: fixed;
+		top: 4rem;
+		left: 0;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
 	}
 }

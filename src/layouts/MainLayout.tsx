@@ -5,11 +5,11 @@ import ScrollIndicator from '../components/ScrollIndicator';
 import './MainLayout.css';
 
 const Home = lazy(() => import('../pages/Home'));
-const About = lazy(() => import('../pages/Content/About'));
+
 const Portfolio = lazy(() => import('../pages/Content/Portfolio'));
-const Contact = lazy(() => import('../pages/Content/Contact'));
 const TechStack = lazy(() => import('../pages/Content/TechStack'));
 const Travel = lazy(() => import('../pages/Content/Travel'));
+const Contact = lazy(() => import('../pages/Content/Contact'));
 
 const MainLayout = () => {
   const location = useLocation();
@@ -23,9 +23,9 @@ const MainLayout = () => {
             <section id="intro" className="section">
               <Home />
             </section>
-            <section id="about" className="section">
+            {/* <section id="about" className="section">
               <About />
-            </section>
+            </section> */}
             <section id="tech-stack" className="section">
               <TechStack />
             </section>
@@ -43,7 +43,7 @@ const MainLayout = () => {
         ) : (
           // Regular page content for other routes
           <section className="section">
-            {location.pathname === '/about' && <About />}
+            {/* {location.pathname === '/about' && <About />} */}
             {location.pathname === '/tech-stack' && <TechStack />}
             {location.pathname === '/portfolio' && <Portfolio />}
             {location.pathname === '/travel' && <Travel />}
