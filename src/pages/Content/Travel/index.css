@@ -1,5 +1,10 @@
 .map-container {
-	height: 63vh;
+	height: 50vh; /* Reduce height */
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 8px;
+	overflow: hidden;
+	animation: slideUp 1s ease-out;
 }
 
 .travel-page {
@@ -21,6 +26,42 @@
 .mapboxgl-popup {
 	max-width: 350px;
 	font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.travel-section {
+    height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    padding-top: 4rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.travel-content {
+    width: 80%;
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 1rem auto; 
+    text-align: center;
+    color: grey;
+		animation: slideUp 1s ease-out;
+}
+
+.travel-content h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+
+.travel-content p {
+    font-size: 1.6em;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.chinese-text {
+    font-size: 1.3em;
+    opacity: 0.9;
 }
 
 @media only screen and (max-width: 375px) {
@@ -47,4 +88,23 @@
 		max-width: 250px;
 		font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	}
+}
+
+@media only screen and (max-width: 768px) {
+    .travel-section {
+        padding: 1rem;
+        padding-top: 3rem;
+    }
+
+    .travel-content {
+        width: 90%;
+    }
+
+    .travel-content h2 {
+        font-size: 1.5em;
+    }
+
+    .travel-content p {
+        font-size: 1em;
+    }
 }

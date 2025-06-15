@@ -1,0 +1,80 @@
+.tech-stack {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center,
+        rgba(20, 184, 166, 1) 0%,
+        rgba(20, 184, 166, 0.8) 40%, 
+        rgba(20, 184, 166, 0.3) 85%,
+        rgba(255, 255, 255, 1) 100%);
+    animation: slideUp 1s ease-out;
+}
+
+.tech-content {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tech-description {
+    width: 100%;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.tech-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.tech-row {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 5.5rem;
+}
+
+.tech-icons {
+    position: absolute;
+    display: flex;
+    gap: 3rem;
+    font-size: 4rem;
+    animation: slide 30s linear infinite;
+    white-space: nowrap;
+}
+
+.row1 { animation-delay: 0s; }
+.row2 { 
+    animation-direction: reverse;
+    animation-delay: 7s;
+}
+.row3 { animation-delay: 0s; }
+.row4 { 
+    animation-direction: reverse;
+    animation-delay: 7s;
+}
+
+@keyframes slide {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+@media (max-width: 768px) {
+    .tech-content {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}
+
+.tech-svg {
+    width: 1em;
+    height: 1em;
+    font-size: 4rem;
+    transition: transform 0.3s ease;
+}

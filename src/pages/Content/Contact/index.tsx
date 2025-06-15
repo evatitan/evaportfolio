@@ -1,5 +1,7 @@
 import React, { Component, ChangeEvent } from 'react';
 import './index.css';
+import github from '../../../assets/icons/github.svg';
+import linkedin from '../../../assets/icons/linkedin.svg';
 
 interface ContactState {
   name: string;
@@ -80,6 +82,15 @@ export default class Contact extends Component<{}, ContactState> {
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="contact-icons">
+          <a href="https://github.com/evatitan">
+            <img className="contact-icon" src={github} alt="github" />
+          </a>
+          <a href="https://www.linkedin.com/in/guihua-yin-a04191b7/">
+            <img className="contact-icon" src={linkedin} alt="linkedin" />
+          </a>
         </div>
       </div>
     );

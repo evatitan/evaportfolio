@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './ScrollIndicator.css';
 
 const ScrollIndicator = () => {
@@ -20,6 +20,18 @@ const ScrollIndicator = () => {
     });
   };
 
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+      /* Safari support */
+      ...(navigator.userAgent.indexOf('Safari') !== -1 && {
+        behavior: 'auto',
+      }),
+    });
+  };
+
   useEffect(() => {
     const checkScroll = () => {
       const windowHeight = window.innerHeight;
@@ -33,11 +45,17 @@ const ScrollIndicator = () => {
     return () => window.removeEventListener('scroll', checkScroll);
   }, []);
 
-  if (isLastSection) return null;
-
   return (
-    <div className="scroll-indicator" onClick={scrollToNextSection}>
-      <FontAwesomeIcon icon={faChevronDown} className="scroll-arrow" />
+    <div className="scroll-indicator" onClick={e => e.stopPropagation()}>
+      {isLastSection ? (
+        <FontAwesomeIcon icon={faChevronUp} className="scroll-arrow up" onClick={scrollToTop} />
+      ) : (
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          className="scroll-arrow down"
+          onClick={scrollToNextSection}
+        />
+      )}
     </div>
   );
 };

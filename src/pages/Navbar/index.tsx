@@ -44,34 +44,15 @@ export default class Navbar extends Component<{}, NavbarState> {
               <MyNavLink onClick={this.handleLinkClicked} to="/about" className="navbar-item">
                 About
               </MyNavLink>
-              {/* <MyNavLink onClick={this.handleLinkClicked} to="/travel" className="navbar-item">
-                Travel
-              </MyNavLink> */}
+              <MyNavLink onClick={this.handleLinkClicked} to="/tech-stack" className="navbar-item">
+                Tech-stack
+              </MyNavLink>
               <MyNavLink onClick={this.handleLinkClicked} to="/portfolio" className="navbar-item">
                 Portfolio
               </MyNavLink>
-              {/* <MyNavLink to="/todoList" className="navbar-item" style={{ fontSize: '20px' }}>
-								todoList
-							</MyNavLink> */}
-
-              <div className="navbar-item has-dropdown is-hoverable">
-                {/* <MyNavLink
-                  onClick={this.handleLinkClicked}
-                  to="/language/spanish"
-                  className="navbar-link"
-                >
-                  Language
-                </MyNavLink> */}
-                {/* <div className="navbar-dropdown">
-                  <MyNavLink
-                    onClick={this.handleLinkClicked}
-                    to="/language/spanish"
-                    className="navbar-item"
-                  >
-                    Spanish
-                  </MyNavLink>
-                </div> */}
-              </div>
+              <MyNavLink onClick={this.handleLinkClicked} to="/travel" className="navbar-item">
+                Travel
+              </MyNavLink>
               <MyNavLink onClick={this.handleLinkClicked} to="/contact" className="navbar-item">
                 Contact
               </MyNavLink>

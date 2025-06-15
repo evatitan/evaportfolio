@@ -9,6 +9,16 @@
   transition: background-color 0.3s;
 }
 
+.scroll-indicator.down {
+  bottom: 20px;
+  right: 20px;
+}
+
+.scroll-indicator.up {
+  bottom: 80px;
+  right: 20px;
+}
+
 .scroll-indicator:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }

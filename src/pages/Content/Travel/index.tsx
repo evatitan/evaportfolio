@@ -1,124 +1,77 @@
-// import React, { Component, Fragment } from 'react';
-// import mapboxgl, { MapMouseEvent } from 'mapbox-gl';
-// import './index.css';
-// import placesData from './data';
+import React, { useEffect, useRef } from 'react';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import placesData from './data';
+import './index.css';
 
-// interface GeoJSONFeature {
-//   type: string;
-//   geometry: {
-//     type: string;
-//     coordinates: number[];
-//   };
-//   properties: {
-//     title: string;
-//     [key: string]: any;
-//   };
-// }
+// Fix Leaflet's default icon
+let DefaultIcon = L.icon({
+  iconUrl: icon,
+  shadowUrl: iconShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+});
 
-// interface TravelState {
-//   lng: number;
-//   lat: number;
-//   zoom: number;
-// }
+L.Marker.prototype.options.icon = DefaultIcon;
 
-// mapboxgl.accessToken =
-//   'pk.eyJ1IjoiZXZhdGl0YW4iLCJhIjoiY2w3bnU3cDMwMDdicTNubzE1bmp1b3o5NCJ9.iF0nA5sh1E619qs_z4_vlw';
+const Travel = () => {
+  const mapContainer = useRef<HTMLDivElement>(null);
 
-// export default class Travel extends Component<{}, TravelState> {
-//   mapContainer: React.RefObject<HTMLDivElement>;
+  useEffect(() => {
+    if (!mapContainer.current) return;
 
-//   constructor(props: {}) {
-//     super(props);
-//     this.state = {
-//       lng: -3.7,
-//       lat: 40.41,
-//       zoom: 2.5,
-//     };
-//     this.mapContainer = React.createRef();
-//   }
+    const map = L.map(mapContainer.current, {
+      minZoom: 2, // Prevent zooming out too far
+      maxZoom: 18, // Limit maximum zoom level
+    }).setView([40.41, -3.7], 2.5);
 
-//   componentDidMount() {
-//     const { lng, lat, zoom } = this.state;
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+    }).addTo(map);
 
-//     const map = new mapboxgl.Map({
-//       container: this.mapContainer.current!,
-//       style: 'mapbox://styles/mapbox/streets-v11',
-//       center: [lng, lat],
-//       zoom: zoom,
-//     });
+    // Add markers for places
+    interface PlaceProperties {
+      title: string;
+      [key: string]: any;
+    }
 
-//     map.on('move', () => {
-//       this.setState({
-//         lng: map.getCenter().lng.toFixed(4),
-//         lat: map.getCenter().lat.toFixed(4),
-//         zoom: map.getZoom().toFixed(2),
-//       });
-//     });
+    interface PlaceGeometry {
+      coordinates: number[];
+      [key: string]: any;
+    }
 
-//     map.on('load', () => {
-//       map.addSource('places', {
-//         type: 'geojson',
-//         data: {
-//           type: 'FeatureCollection',
-//           features: placesData as GeoJSONFeature[],
-//         },
-//       });
+    interface Place {
+      properties: PlaceProperties;
+      geometry: PlaceGeometry;
+      [key: string]: any;
+    }
 
-//       map.addLayer({
-//         id: 'places',
-//         type: 'circle',
-//         source: 'places',
-//         paint: {
-//           'circle-color': '#4264fb',
-//           'circle-radius': 6,
-//           'circle-stroke-width': 2,
-//           'circle-stroke-color': '#ffffff',
-//         },
-//       });
+    (placesData.places as Place[]).forEach((place: Place) => {
+      L.marker([place.geometry.coordinates[1], place.geometry.coordinates[0]])
+        .bindPopup(place.properties.title)
+        .addTo(map);
+    });
 
-//       const popup = new mapboxgl.Popup({
-//         closeButton: false,
-//         closeOnClick: false,
-//       });
-//       map.on('mouseenter', 'places', (e: MapMouseEvent) => {
-//         if (!e.features || !e.features[0]) return;
+    return () => {
+      map.remove();
+    };
+  }, []);
 
-//         map.getCanvas().style.cursor = 'pointer';
-//         const coordinates = e.features[0].geometry.coordinates.slice();
-//         const description = e.features[0].properties?.title;
+  return (
+    <div className="travel-section">
+      <div ref={mapContainer} className="map-container" />
+      <div className="travel-content">
+        <h2>My Travel Journey</h2>
+        <p>
+          Exploring different cultures and places enriches my perspective. Each destination offers
+          unique insights into local traditions, cuisine, and ways of life.
+        </p>
+        <p className="chinese-text">喜欢旅游，喜欢生活 - 在旅途中寻找生活的美好</p>
+      </div>
+    </div>
+  );
+};
 
-//         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-//           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-//         }
-
-//         popup
-//           .setLngLat(coordinates)
-//           .setHTML(description || '')
-//           .addTo(map);
-//       });
-
-//       map.on('mouseleave', 'places', () => {
-//         map.getCanvas().style.cursor = '';
-//         popup.remove();
-//       });
-//     });
-//   }
-
-//   render() {
-//     return (
-//       <Fragment>
-//         <div ref={this.mapContainer} className="map-container" />
-//         <div className="travel-page">
-//           <h2>My Travel Map</h2>
-//           <p>
-//             What I can learn from on the trip? I love to learn about various cultures, food and even
-//             the language. I also love to learn how each place is different from mine.
-//             <br />
-//             喜欢旅游，喜欢生活
-//           </p>
-//         </div>
-//       </Fragment>
-//     );
-//   }
-// }
-export {};
+export default Travel;

@@ -3,7 +3,6 @@ import React, { PureComponent, Fragment } from 'react';
 import Item from './Item';
 import urTurn from '../../../assets/urturn.png';
 import evaResume from '../../../assets/evaResume.png';
-import todoList from '../../../assets/todoList.png';
 import './index.css';
 
 interface Project {
@@ -32,15 +31,6 @@ export default class Portfolio extends PureComponent<{}, PortfolioState> {
         webSrc: '/home',
         internal: true,
         githubSrc: 'https://github.com/evatitan/perfil',
-      },
-      {
-        id: '002',
-        name: 'TodoList',
-        description: 'react-redux',
-        img: todoList,
-        webSrc: '/portfolio/todoList',
-        internal: true,
-        githubSrc: 'https://github.com/evatitan/ReactApps',
       },
       {
         id: '003',
