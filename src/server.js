@@ -6,7 +6,7 @@ const port = 3000;
 app.get('/', (req, res) => {
 	const { q } = req.query;
 	axios({
-		url: 'https://localhost:3000/evatitan',
+		url: 'https://localhost:3000/home',
 		params: { q }
 	}).then((response) => {
 		console.log('server 3000');

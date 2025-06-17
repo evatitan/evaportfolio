@@ -6,7 +6,7 @@ import './MainLayout.css';
 
 const Home = lazy(() => import('../pages/Home'));
 
-const Portfolio = lazy(() => import('../pages/Content/Portfolio'));
+const Portfolio = lazy(() => import('../pages/Content/Portfolio/Portfolio'));
 const TechStack = lazy(() => import('../pages/Content/TechStack'));
 const Travel = lazy(() => import('../pages/Content/Travel'));
 const Contact = lazy(() => import('../pages/Content/Contact'));

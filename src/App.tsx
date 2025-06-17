@@ -8,7 +8,7 @@ const Navbar = lazy(() => import('./pages/Navbar'));
 const Home = lazy(() => import('./pages/Home'));
 // const About = lazy(() => import('./pages/Content/About'));
 const Travel = lazy(() => import('./pages/Content/Travel'));
-const Portfolio = lazy(() => import('./pages/Content/Portfolio'));
+const Portfolio = lazy(() => import('./pages/Content/Portfolio/Portfolio'));
 const Contact = lazy(() => import('./pages/Content/Contact'));
 const MainLayout = lazy(() => import('./layouts/MainLayout'));
 

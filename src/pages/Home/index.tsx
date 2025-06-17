@@ -47,7 +47,11 @@ export default class Home extends Component<{}, HomeState> {
               <img className="self-image" src={eva} alt="eva" />
               <div className="my-name">Guihua Yin</div>
               <div className="my-position">
-                A passionate <strong>Full Stack Web Developer</strong> and educator
+                Full Stack Web Developer
+                <br />
+                &
+                <br />
+                language educator
                 <br />
                 Base in Spain
                 <br />

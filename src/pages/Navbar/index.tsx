@@ -70,7 +70,7 @@ const Navbar = () => {
             </MyNavLink>
           </div>
 
-          <div className="navbar-item">
+          {/* <div className="navbar-item">
             <button
               className="button is-ghost"
               onClick={toggleTheme}
@@ -78,7 +78,7 @@ const Navbar = () => {
             >
               <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
