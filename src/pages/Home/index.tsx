@@ -2,8 +2,8 @@ import { Component } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import eva from '../../../src/assets/eva.jpeg';
 import './index.css';
+import eva from '../../assets/eva.jpeg';
 library.add(fab, faArrowCircleDown);
 
 interface HomeState {

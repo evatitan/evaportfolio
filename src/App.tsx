@@ -1,7 +1,7 @@
 import { Component, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import Loading from './components/Loading';
+import Loading from './pages/Loading';
 import TechStack from './pages/Content/TechStack';
 
 const Navbar = lazy(() => import('./pages/Navbar'));

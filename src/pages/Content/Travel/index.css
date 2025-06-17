@@ -1,10 +1,10 @@
 .map-container {
-	height: 50vh; /* Reduce height */
+	height: 60vh; 
 	width: 75%;
 	margin: 0 auto;
 	border-radius: 8px;
 	overflow: hidden;
-	animation: slideUp 1s ease-out;
+	margin-top: 2rem;
 
 }
 
@@ -18,10 +18,12 @@
 	font-size: 2em;
 	padding-top: 30px;
 	padding-bottom: 20px;
+
 }
 
 .travel-page p {
 	font-size: 1.5em;
+	animation: slideUp 1s ease-out;
 }
 
 .mapboxgl-popup {
@@ -30,10 +32,10 @@
 }
 
 .travel-section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding: 2rem;
-    padding-top: 4rem; 
+    padding-top: 6rem; /* Increased padding-top to prevent menu overlap */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +43,6 @@
 		rgba(100, 180, 220, 1) 40%,
 		rgba(180, 220, 240, 0.7) 95%,
 		rgba(255, 255, 255, 1) 100%);
-	animation: slideUp 1s ease-out;
 	
 }
 
@@ -52,7 +53,6 @@
     margin: 1rem auto; 
     text-align: center;
     color: white;
-		animation: slideUp 1s ease-out;
 }
 
 .travel-content h2 {
@@ -73,7 +73,9 @@
 
 @media only screen and (max-width: 375px) {
 	.map-container {
-		height: 55vh;
+		height: 45vh; /* Reduced from 55vh */
+		width: 90%; /* Reduced from default 75% */
+		margin-top: 1rem;
 	}
 
 	.travel-page {
@@ -91,16 +93,26 @@
 	.travel-page p {
 		font-size: 1.2em;
 	}
-	.mapboxgl-popup {
-		max-width: 250px;
-		font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+/* Add a specific media query for medium-small phones */
+@media only screen and (max-width: 480px) {
+	.map-container {
+		height: 50vh;
+		width: 85%;
 	}
 }
 
 @media only screen and (max-width: 768px) {
     .travel-section {
         padding: 1rem;
-        padding-top: 3rem;
+        padding-top: 5rem;
+    }
+
+    .map-container {
+        height: 50vh;
+        width: 85%;
+        margin-top: 1.5rem;
     }
 
     .travel-content {
@@ -114,4 +126,24 @@
     .travel-content p {
         font-size: 1em;
     }
+}
+
+/* Specific iPad styling */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .map-container {
+        height: 50vh;
+        width: 80%;
+    }
+
+    .travel-content {
+			width: 90%;
+	}
+
+	.travel-content h2 {
+			font-size: 1.5em;
+	}
+
+	.travel-content p {
+			font-size: 1em;
+	}
 }

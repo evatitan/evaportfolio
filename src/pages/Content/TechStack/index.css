@@ -12,25 +12,30 @@
 }
 
 .tech-content {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
+    justify-content: space-between;
 }
 
 .tech-description {
-    width: 100%;
-    padding: 2rem;
-    font-size: 2rem;
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 1.8rem;
+    font-size: 1.6rem;
     color: white;
+    text-align: left;
 }
 
 .tech-list {
-    width: 100%;
+    flex: 1 1 45%;
+    min-width: 220px;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .tech-row {
@@ -60,6 +65,13 @@
     animation-delay: 7s;
 }
 
+.tech-svg {
+    width: 1em;
+    height: 1em;
+    font-size: 4rem;
+    transition: transform 0.3s ease;
+}
+
 @keyframes slide {
     from { transform: translateX(100%); }
     to { transform: translateX(-100%); }
@@ -67,14 +79,89 @@
 
 @media (max-width: 768px) {
     .tech-content {
-        grid-template-columns: 1fr;
-        width: 90%;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .tech-description {
+        padding: 1.5rem;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    .tech-row {
+        height: 4.5rem;
+    }
+    
+    .tech-svg {
+        font-size: 2.5rem;
     }
 }
 
-.tech-svg {
-    width: 1em;
-    height: 1em;
-    font-size: 4rem;
-    transition: transform 0.3s ease;
+@media (max-width: 376px) {
+    .tech-content {
+        width: 95%;
+        gap: 1rem;
+    }
+    
+    .tech-description {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .tech-description h2 {
+        font-size: 1.3rem;
+    }
+    
+    .tech-description h3 {
+        font-size: 1.2rem;
+    }
+    
+    .tech-row {
+        height: 3rem;
+    }
+    
+    .tech-icons {
+        gap: 1.5rem;
+    }
+    
+    .tech-svg {
+        font-size: 2.5rem;
+    }
+    .tech-svg {
+        width: 1em;
+        height:1em;
+        font-size: 2rem;
+        transition: transform 0.3s ease;
+    }
+    
 }
+
+/* iPad and similar tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tech-content {
+        gap: 1.5rem;
+    }
+    
+    .tech-description {
+        font-size: 1.4rem;
+        padding: 1.5rem;
+    }
+    
+    .tech-description h2 {
+        font-size: 1.8rem;
+    }
+    
+    .tech-description h3 {
+        font-size: 1.3rem;
+    }
+    
+    .tech-row {
+        height: 5rem;
+    }
+    
+    .tech-svg {
+        font-size: 3.5rem;
+    }
+}
+

@@ -69,26 +69,57 @@
 	align-items: center;
 }
 
+/* Hide burger by default, show only on small and iPad screens */
+.navbar-burger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+/* Show burger and hide menu on small screens and iPad */
+@media only screen and (max-width: 1024px) {
+    .navbar-burger {
+        display: block;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.2rem;
+        z-index: 1100;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: rgba(255,255,255,0.97);
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        padding: 2rem 0 1rem 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        z-index: 1000;
+    }
+
+    .navbar-menu.is-active {
+        display: flex;
+    }
+
+    .navbar-item {
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 1rem 0;
+    }
+}
+
 @media only screen and (max-width: 375px) {
 	.navbar {
 		width: 375px;
 		height: auto;
 		position: fixed;
 		top: 0;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.navbar {
-		padding: 0;
-	}
-	
-	.navbar-menu.is-active {
-		position: fixed;
-		top: 4rem;
-		left: 0;
-		width: 100%;
-		background-color: rgba(255, 255, 255, 0.1);
-		backdrop-filter: blur(10px);
 	}
 }

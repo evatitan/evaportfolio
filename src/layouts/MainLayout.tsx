@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
-import Loading from '../components/Loading';
+import Loading from '../pages/Loading';
 import './MainLayout.css';
 
 const Home = lazy(() => import('../pages/Home'));

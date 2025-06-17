@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import MyNavLink from '../../components/MyNavLink';
+import MyNavLink from '../MyNavLink';
 import './index.css';
 
 const Navbar = () => {

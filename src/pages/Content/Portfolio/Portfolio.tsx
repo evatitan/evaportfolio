@@ -6,8 +6,7 @@ import evablog from '../../../assets/projects/evablog.png';
 import nottodo from '../../../assets/projects/nottodo.png';
 import portfolio from '../../../assets/projects/portfolio.png';
 import goFastIMSystem from '../../../assets/projects/goFastIMSystem.png';
-
-import './index.css';
+import './Portfolio.css';
 
 const projects = [
   {
@@ -57,7 +56,7 @@ const projects = [
     description:
       'A fast and efficient instant messaging system built with Go, designed for real-time communication.',
     image: goFastIMSystem,
-    techStack: ['golang'],
+    techStack: ['GOLANG'],
     links: {
       live: 'https://github.com/evatitan/goFastIMSystem',
       github: 'https://github.com/evatitan/goFastIMSystem',
