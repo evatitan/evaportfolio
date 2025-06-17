@@ -68,7 +68,7 @@ const Travel = () => {
           Exploring different cultures and places enriches my perspective. Each destination offers
           unique insights into local traditions, cuisine, and ways of life.
         </p>
-        <p className="chinese-text">喜欢旅游，喜欢生活 - 在旅途中寻找生活的美好</p>
+        <p className="chinese-text">喜欢旅游，喜欢生活 - 在旅途中遇见更多美好</p>
       </div>
     </div>
   );

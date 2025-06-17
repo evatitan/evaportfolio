@@ -1,4 +1,4 @@
-import React, { Component, ChangeEvent } from 'react';
+import { Component, ChangeEvent } from 'react';
 import './index.css';
 import github from '../../../assets/icons/github.svg';
 import linkedin from '../../../assets/icons/linkedin.svg';

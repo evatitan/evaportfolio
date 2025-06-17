@@ -1,13 +1,9 @@
 import { useState, useEffect } from 'react';
 import MyNavLink from '../../components/MyNavLink';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import { useTheme } from '../../context/ThemeContext';
 import './index.css';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
-  const { isDarkMode, toggleTheme } = useTheme();
 
   const handleBurger = () => {
     setIsActive(!isActive);
@@ -53,9 +49,6 @@ const Navbar = () => {
             <MyNavLink onClick={handleLinkClicked} to="/home" className="navbar-item">
               Home
             </MyNavLink>
-            {/* <MyNavLink onClick={handleLinkClicked} to="/about" className="navbar-item">
-              About
-            </MyNavLink> */}
             <MyNavLink onClick={handleLinkClicked} to="/tech-stack" className="navbar-item">
               Tech-stack
             </MyNavLink>
@@ -69,16 +62,6 @@ const Navbar = () => {
               Contact
             </MyNavLink>
           </div>
-
-          {/* <div className="navbar-item">
-            <button
-              className="button is-ghost"
-              onClick={toggleTheme}
-              title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            >
-              <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
-            </button>
-          </div> */}
         </div>
       </div>
     </nav>

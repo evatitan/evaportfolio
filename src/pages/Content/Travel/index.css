@@ -5,6 +5,7 @@
 	border-radius: 8px;
 	overflow: hidden;
 	animation: slideUp 1s ease-out;
+
 }
 
 .travel-page {
@@ -36,6 +37,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+		background: radial-gradient(circle at center,
+		rgba(100, 180, 220, 1) 40%,
+		rgba(180, 220, 240, 0.7) 95%,
+		rgba(255, 255, 255, 1) 100%);
+	animation: slideUp 1s ease-out;
+	
 }
 
 .travel-content {
@@ -44,7 +51,7 @@
     padding: 1rem;
     margin: 1rem auto; 
     text-align: center;
-    color: grey;
+    color: white;
 		animation: slideUp 1s ease-out;
 }
 

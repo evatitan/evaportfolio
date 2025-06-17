@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
 import Loading from '../components/Loading';
-import ScrollIndicator from '../components/ScrollIndicator';
 import './MainLayout.css';
 
 const Home = lazy(() => import('../pages/Home'));
@@ -23,27 +22,21 @@ const MainLayout = () => {
             <section id="intro" className="section">
               <Home />
             </section>
-            {/* <section id="about" className="section">
-              <About />
-            </section> */}
             <section id="tech-stack" className="section">
               <TechStack />
             </section>
             <section id="portfolio" className="section">
               <Portfolio />
             </section>
-            <section id="contact" className="section">
+            <section id="travel" className="section">
               <Travel />
             </section>
             <section id="contact" className="section">
               <Contact />
             </section>
-            <ScrollIndicator />
           </div>
         ) : (
-          // Regular page content for other routes
           <section className="section">
-            {/* {location.pathname === '/about' && <About />} */}
             {location.pathname === '/tech-stack' && <TechStack />}
             {location.pathname === '/portfolio' && <Portfolio />}
             {location.pathname === '/travel' && <Travel />}

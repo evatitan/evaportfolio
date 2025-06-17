@@ -1,13 +1,13 @@
 .home-page {
 	width: 100%;
 	min-height: 100vh;
-	height: 110vh; /* Force full viewport height */
+	height: 110vh; 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	padding: 4rem 20px; /* Add top padding for navbar */
+	padding: 4rem 20px; 
 	margin: 0;
 	box-sizing: border-box;
 	color: white;
@@ -60,8 +60,8 @@
 }
 
 .self-image {
-	width: 300px;  /* Smaller image size */
-	height: 280px;
+	width: 380px;
+	height: 260px;
 	border-radius: 50% ;
 	transition: all 0.3s ease;
 	opacity: 0.8;

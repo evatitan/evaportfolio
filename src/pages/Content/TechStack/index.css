@@ -9,7 +9,6 @@
         rgba(20, 184, 166, 0.8) 40%, 
         rgba(20, 184, 166, 0.3) 85%,
         rgba(255, 255, 255, 1) 100%);
-    animation: slideUp 1s ease-out;
 }
 
 .tech-content {
@@ -24,6 +23,7 @@
     width: 100%;
     padding: 2rem;
     font-size: 2rem;
+    color: white;
 }
 
 .tech-list {
